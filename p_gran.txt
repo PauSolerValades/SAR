@@ -1,0 +1,15 @@
+CASA INTELIGENTE:
+- inicio sesión
+    .USER
+    .PASS
+- regular luces(hora, num, intensidad?) 
+- regular temperatura(hora, num, temp)
+- mantener temperatura()???????????
+- puerta casa
+- puerta garaje
+-- puertas(id, estado) //abierta, no abierta, bloqueada
+- consultar estado: devuelve temperatura, fuga de gas, luces encendidas, agua caliente
+    .LIST
+- calentar agua. 
+
+.USER   usuario     inic
