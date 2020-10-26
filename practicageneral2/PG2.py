@@ -8,26 +8,26 @@ dir_serv = (IP, PORT)
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 contador = 0
 
-def log():
-    return "log"
+def log():                          # PARAMETROS: USUARIO + CONTRASEÑA
+    return "log"                    # Iniciar sesión con el servidor
 
-def put():
-    return "put"
+def put():                          # PARAMETROS: TAMAÑO DEVIDEO + CONTENIDO DE VIDEO
+    return "put"                    #Subir video al servidor
 
-def get():
-    return "get"
+def get():                          # PARAMETROS: ID DE VIDEO
+    return "get"                    # Descagar un video del servidor
 
-def tag():
-    return "tag"
+def tag():                          # PARAMETROS ID VIDEO
+    return "tag"                    # Obtener la lista de etiquetas de un vídeo
 
-def st():
-    return "tag"
+def st():                           # PARAMETROS ID VIDEO + ETIQUETA
+    return "tag"                    # Asignar una etiqueta a un video
 
-def fnd():
-    return "fnd"
+def fnd():                          # PARAMETROS ETIQUETA
+    return "fnd"                    # Buscar vídeos que tengan determinada etiqueta
 
 def qit():
-    return "qit"
+    return "qit"                    # Cerrar la sesión
 
 def switch(case):                   # Ya que en Python3 no existe la función switch por defecto hemos implementado usando la función diccionario
     switcher = {                    # una funcion que imita su comportamiento
