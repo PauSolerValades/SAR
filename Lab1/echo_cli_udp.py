@@ -11,7 +11,7 @@ if len( sys.argv ) != 2:
 
 dir_serv = (sys.argv[1], 50001)
 
-s= sk.socket(sk.AF_INET, sk.SOCK_DGRAM)
+s = sk.socket(sk.AF_INET, sk.SOCK_DGRAM)
 
 print( "Introduce el mensaje que quieres enviar (mensaje vacío para terminar):" )
 while True:

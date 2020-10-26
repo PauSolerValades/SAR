@@ -8,6 +8,8 @@ s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 #hacemos el bind
 #para el punto4 tenemos que canviar el 50001 por 0, así coge el puerto disponible.
+
+#s.bind((id, puerto))
 s.bind(('', 50001))
 
 while True:
