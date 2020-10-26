@@ -29,8 +29,8 @@ def fnd():
 def qit():
     return "qit"
 
-def switch(case):
-    switcher = {
+def switch(case):                   # Ya que en Python3 no existe la función switch por defecto hemos implementado usando la función diccionario
+    switcher = {                    # una funcion que imita su comportamiento
         'LOG': log(),
         'PUT': put(),
         'GET': get(),
@@ -49,12 +49,12 @@ for caracter in entrada:
         print(contador)
 
 if contador == 0:
-    case = entrada              # 1 PARAMETRO (CASOS: QIT)
+    case = entrada                  # 1 PARAMETRO (CASOS: QIT)
 
-if contador == 1:               # 2 PARAMETROS (CASOS: GET/TAG/FND)
+if contador == 1:                   # 2 PARAMETROS (CASOS: GET/TAG/FND)
     case, p1 = entrada.split()
 
-if contador == 2:               # 3 PARAMETROS (CASOS: LOG/PUT/SET)
+if contador == 2:                   # 3 PARAMETROS (CASOS: LOG/PUT/SET)
     case, p1, p2 = entrada.split()
 
 print (switch(case))
