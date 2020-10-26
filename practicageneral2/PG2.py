@@ -21,7 +21,7 @@ def tag():                          # PARAMETROS ID VIDEO
     return "tag"                    # Obtener la lista de etiquetas de un vídeo
 
 def st():                           # PARAMETROS ID VIDEO + ETIQUETA
-    return "tag"                    # Asignar una etiqueta a un video
+    return "st"                    # Asignar una etiqueta a un video
 
 def fnd():                          # PARAMETROS ETIQUETA
     return "fnd"                    # Buscar vídeos que tengan determinada etiqueta
