@@ -2,7 +2,7 @@
 
 import socket
 
-PORT = 50002
+PORT = 50006
 
 s = socket.socket( socket.AF_INET, socket.SOCK_STREAM )
 
@@ -14,10 +14,12 @@ while True:
 	dialogo, dir_cli = s.accept()
 	print( "Cliente conectado desde {}:{}.".format( dir_cli[0], dir_cli[1] ) )
 	while True:
-		buf = dialogo.recv( 1024 )
+		buf = dialogo.recv( 4096 )
 		if not buf:
 			break
-		dialogo.sendall( buf )
+		mensaje = "+OK"
+		print(buf)
+		dialogo.sendall( mensaje.encode()+b"1013")
 	print( "Solicitud de cierre de conexión recibida." )
 	dialogo.close()
 s.close()
