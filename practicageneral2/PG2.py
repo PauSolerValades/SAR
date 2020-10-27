@@ -6,55 +6,63 @@ IP = 456  # Es necesario escribir cual es la IP del servidor al que nos queremos
 
 dir_serv = (IP, PORT)
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-contador = 0
 
-def log():                          # PARAMETROS: USUARIO + CONTRASEÑA
-    return "log"                    # Iniciar sesión con el servidor
+case = 'INICIO'
 
-def put():                          # PARAMETROS: TAMAÑO DEVIDEO + CONTENIDO DE VIDEO
-    return "put"                    #Subir video al servidor
+def log(x,y):
+    print("cipote")                     # PARAMETROS: USUARIO + CONTRASEÑA                   # Iniciar sesión con el servidor
 
-def get():                          # PARAMETROS: ID DE VIDEO
-    return "get"                    # Descagar un video del servidor
+def put(x,y):                           # PARAMETROS: TAMAÑO DE VIDEO + CONTENIDO DE VIDEO
+    return "put"                        #Subir video al servidor
 
-def tag():                          # PARAMETROS ID VIDEO
-    return "tag"                    # Obtener la lista de etiquetas de un vídeo
+def get(x):                             # PARAMETROS: ID DE VIDEO
+    return "get"                        # Descagar un video del servidor
 
-def st():                           # PARAMETROS ID VIDEO + ETIQUETA
-    return "st"                    # Asignar una etiqueta a un video
+def tag(x):                             # PARAMETROS ID VIDEO
+    return "tag"                        # Obtener la lista de etiquetas de un vídeo
 
-def fnd():                          # PARAMETROS ETIQUETA
-    return "fnd"                    # Buscar vídeos que tengan determinada etiqueta
+def st(x,y):                            # PARAMETROS ID VIDEO + ETIQUETA
+    return "st"                         # Asignar una etiqueta a un video
 
-def qit():
-    return "qit"                    # Cerrar la sesión
+def fnd(x):                             # PARAMETROS ETIQUETA
+    return "fnd"                        # Buscar vídeos que tengan determinada etiqueta
 
-def switch(case):                   # Ya que en Python3 no existe la función switch por defecto hemos implementado usando la función diccionario
-    switcher = {                    # una funcion que imita su comportamiento
-        'LOG': log(),
-        'PUT': put(),
-        'GET': get(),
-        'TAG': tag(),
-        'SET': st(),
-        'FND': fnd(),
-        'QIT': qit()
-    }
-    return switcher.get(case)
+def qit():                              # PARAMETROS
+    return "qit"                        # Cerrar la sesión
+
     
+while case != 'QIT':
+    contador = 0
+    entrada = input()                   # Utilizado para controlar todos los tipos de entrada que podemos tener (1,2 y 3 parametros)
+    for caracter in entrada:
+        if caracter == " ":             # Recorremos el input contando cuantos parametros hay para que no salte el
+            contador = contador + 1     # error de split, al no poder asignar todas las variables
 
-entrada = input()                   # Utilizado para cobtrolar todos los tipos de entrada que podemos tener (1,2 y 3 parametros)
-for caracter in entrada:
-    if caracter == " ":             # Recorremos el input contando cuantos parametros hay para que no salte el
-        contador = contador + 1     # error de split, al no poder asignar todas las variables
-        print(contador)
+    if contador == 0:
+        case = entrada                  # 1 PARAMETRO (CASOS: QIT)
+        if case == 'QIT':
+            break
+        else: print("Comando o numero de parametros erroneos")
 
-if contador == 0:
-    case = entrada                  # 1 PARAMETRO (CASOS: QIT)
+    if contador == 1:                   # 2 PARAMETROS (CASOS: GET/TAG/FND)
+        case, p1 = entrada.split()
+        if case == 'GET':
+            get(p1)
+        elif case == 'TAG':
+            tag(p1)
+        elif case == 'FND':
+            fnd(p1)
+        else : print("Comando o numero de parametros erroneos")
 
-if contador == 1:                   # 2 PARAMETROS (CASOS: GET/TAG/FND)
-    case, p1 = entrada.split()
-
-if contador == 2:                   # 3 PARAMETROS (CASOS: LOG/PUT/SET)
-    case, p1, p2 = entrada.split()
-
-print (switch(case))
+    if contador == 2:                   # 3 PARAMETROS (CASOS: LOG/PUT/SET)
+        case, p1, p2 = entrada.split()
+        if case == 'LOG':
+            log(p1,p2)
+        elif case == 'PUT':
+            put(p1,p2)
+        elif case == 'ST':
+            st(p1,p2)
+        else: print("Comando o numero de parametros erroneos")
+    
+    
+    
