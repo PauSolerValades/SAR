@@ -1,30 +1,30 @@
 import socket
 import sys
 
+case = 'INICIO'
 PORT = 50002
 IP = 456  # Es necesario escribir cual es la IP del servidor al que nos queremos conectar
 
 dir_serv = (IP, PORT)
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-case = 'INICIO'
 
-def log(x,y):
-    print("cipote")                     # PARAMETROS: USUARIO + CONTRASEÑA                   # Iniciar sesión con el servidor
+def log(user, password):                # PARAMETROS: USUARIO + CONTRASEÑA 
+    print("cipote")                     # Iniciar sesión con el servidor
 
-def put(x,y):                           # PARAMETROS: TAMAÑO DE VIDEO + CONTENIDO DE VIDEO
+def put(tVideo,fVideo):                 # PARAMETROS: TAMAÑO DE VIDEO + CONTENIDO DE VIDEO
     return "put"                        #Subir video al servidor
 
-def get(x):                             # PARAMETROS: ID DE VIDEO
+def get(idVideo):                       # PARAMETROS: ID DE VIDEO
     return "get"                        # Descagar un video del servidor
 
-def tag(x):                             # PARAMETROS ID VIDEO
+def tag(idVideo):                       # PARAMETROS ID VIDEO
     return "tag"                        # Obtener la lista de etiquetas de un vídeo
 
-def st(x,y):                            # PARAMETROS ID VIDEO + ETIQUETA
+def st(idVideo,label):                  # PARAMETROS ID VIDEO + ETIQUETA
     return "st"                         # Asignar una etiqueta a un video
 
-def fnd(x):                             # PARAMETROS ETIQUETA
+def fnd(label):                         # PARAMETROS ETIQUETA
     return "fnd"                        # Buscar vídeos que tengan determinada etiqueta
 
 def qit():                              # PARAMETROS
@@ -36,7 +36,7 @@ while case != 'QIT':
     entrada = input()                   # Utilizado para controlar todos los tipos de entrada que podemos tener (1,2 y 3 parametros)
     for caracter in entrada:
         if caracter == " ":             # Recorremos el input contando cuantos parametros hay para que no salte el
-            contador = contador + 1     # error de split, al no poder asignar todas las variables
+            contador = contador + 1     # error de split, al no poder asignar todas las variables 
 
     if contador == 0:
         case = entrada                  # 1 PARAMETRO (CASOS: QIT)
