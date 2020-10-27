@@ -17,7 +17,7 @@ while True:
 		buf = dialogo.recv( 4096 )
 		if not buf:
 			break
-		mensaje = "+OK"
+		mensaje = "+OK#PITO#"
 		print(buf)
 		dialogo.sendall( mensaje.encode()+b"1013")
 	print( "Solicitud de cierre de conexión recibida." )

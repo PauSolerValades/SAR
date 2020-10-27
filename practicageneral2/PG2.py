@@ -55,6 +55,7 @@ def get(idVideo):                       # PARAMETROS: ID DE VIDEO
 
     if respuesta.startswith("+OK"):
         _, size, fl = respuesta.split("#")
+        print("hastalapolladetodo")
     else:
         print(err(respuesta))                        # Descagar un video del servidor
 
@@ -84,7 +85,9 @@ def fnd(label):                         # PARAMETRif
     if respuesta.startswith("+OK"):
         array = respuesta.split("#")
         array.pop(0)
+        print(array)
         array.pop(0)
+        print(array)
     else:
         print(err(respuesta))
 
