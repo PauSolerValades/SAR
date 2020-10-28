@@ -6,23 +6,51 @@ case = 'INICIO'
 PORT = 50006
 IP = 'localhost'  # Es necesario escribir cual es la IP del servidor al que nos queremos conectar
 TIMEOUT_TIME = 60
+FILENAME = "video.txt"
+SEND_SIZE = 4096
 
 dir_serv = (IP, PORT)
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 logged = False
 
-def recive():
-    s.sendall(entrada.encode())
-    l = len(entrada.encode())                     # Iniciar sesión con el servidor
+def recive(datos):
+    s.sendall(datos.encode())
+    l = len(datos.encode())                     # Iniciar sesión con el servidor
 
-    f = b"" 
+    acc = b"" 
     ready = select.select([s], [], [], TIMEOUT_TIME)
     if ready[0]:
         while True:
-            f += s.recv(4096)
-            if(f.endswith(b"1013")):
+            acc += s.recv(SEND_SIZE)
+            if(acc.endswith(b"1013")):
                 break
-        return f.decode()
+        return acc.decode()
+        
+def recive_file(datos):
+    f = open("video.mp4", mode='rb')
+
+    s.sendall(datos.encode())
+    acc = b"" 
+    ready = select.select([s], [], [], TIMEOUT_TIME)
+    if ready[0]:
+        answer, size, data = s.recv(SEND_SIZE).split(b"#")
+
+        if answer == b"-ER":
+            return answer.decode()
+        
+        size = int(size)
+        f.write(data)
+        compt = 0
+
+        while True:
+            f.write(s.recv(SEND_SIZE))
+            compt += SEND_SIZE
+            if size > compt:
+                break
+        
+    return answer.decode()
+            
+    
 
 def err(msg):
     return msg.split("#")[1]
@@ -31,18 +59,36 @@ def err(msg):
 def log(user, password):
     global logged
     s.connect( dir_serv )
-    print("ctrankada")                # PARAMETROS: USUARIO + CONTRASEÑA
-    respuesta = recive()
+    respuesta = recive(entrada)
+
     print(respuesta)
     if respuesta.startswith("+OK"):        
         logged = True
-        print("P")
     else:
         print("Err 11")
 
 
 def put(tVideo, fVideo):                 # PARAMETROS: TAMAÑO DE VIDEO + CONTENIDO DE VIDEO
-    respuesta = recive()
+    f = open(FILENAME, mode='rb')
+
+    filesize = os.path.getsize(FILENAME)
+
+    msg = "PUT#" + filesize + "#"
+
+    #Aquí la función recive pero adapatada para enviar el fichero entero.
+    """ 
+        Esto lo necesitamso reescribir porque no tenemos ni el path del fichero que queremos reconvertir ni tampoco podemos convertir los bytes del video en strings para después reconvertir-los.
+    """
+    s.sendall(msg.encode() + f.read())
+
+    acc = b"" 
+    ready = select.select([s], [], [], TIMEOUT_TIME)
+    if ready[0]:
+        while True:
+            acc += s.recv(4096)
+            if(acc.endswith(b"1013")):
+                break
+        respuesta = acc.decode()
 
     if respuesta.startswith("+OK"):
         _, label = respuesta.split("#")
@@ -51,17 +97,16 @@ def put(tVideo, fVideo):                 # PARAMETROS: TAMAÑO DE VIDEO + CONTEN
 
 
 def get(idVideo):                       # PARAMETROS: ID DE VIDEO
-    respuesta = recive()
+    respuesta = recive_file(entrada)
 
     if respuesta.startswith("+OK"):
-        _, size, fl = respuesta.split("#")
-        print("hastalapolladetodo")
+        print("Descarga correcta en " + FILENAME)
     else:
-        print(err(respuesta))                        # Descagar un video del servidor
+        print(err(respuesta))                       # Descagar un video del servidor
 
 
 def tag(idVideo):  
-    respuesta = recive()                     # PARAMETROS ID VIDEO
+    respuesta = recive(entrada)                     # PARAMETROS ID VIDEO
                      # Obtener la lista de etiquetas de un vídeo
     if respuesta.startswith("+OK"):
         array = respuesta.split("#")
@@ -70,7 +115,7 @@ def tag(idVideo):
         print(err(respuesta))
 
 def st(idVideo, label):                  # PARAMETROS ID VIDEO + ETIQUETA
-    respuesta = recive()                         # Asignar una etiqueta a un video
+    respuesta = recive(entrada)                         # Asignar una etiqueta a un video
 
     if respuesta.startswith("+OK"):
         print("OK.")
@@ -80,7 +125,7 @@ def st(idVideo, label):                  # PARAMETROS ID VIDEO + ETIQUETA
 
 
 def fnd(label):                         # PARAMETRif
-    respuesta = recive()
+    respuesta = recive(entrada)
 
     if respuesta.startswith("+OK"):
         array = respuesta.split("#")
