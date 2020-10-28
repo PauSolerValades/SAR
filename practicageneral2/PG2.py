@@ -27,7 +27,7 @@ def recive(datos):
         return acc.decode()
         
 def recive_file(datos):
-    f = open("video.mp4", mode='rb')
+    f = open("video.mp4", mode='wb')
 
     s.sendall(datos.encode())
     acc = b"" 
