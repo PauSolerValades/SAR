@@ -5,22 +5,19 @@ import szasar
 
 LINEA = ('-' * 39)
 SERVER = 'localhost'
-PORT = 50007
-ER_MSG = (
-	"Correcto.",
-	"Comando desconocido o inesperado.",
-	"Parametro inesperado. Se ha recibido un parametro donde no se esperaba."
-	"alta parámetro. Falta un parámetro que no es opcional.",
-	"Parametro con formato incorrecto.",
-	"Clave de paso o password incorrecto.",
-	"Error al crear la lista de ficheros.",
-	"El fichero no existe.",
-	"Error al bajar el fichero.",
-	"Un usuario anonimo no tiene permisos para esta operacion.",
-	"El fichero es demasiado grande.",
-	"Error al preparar el fichero para subirlo.",
-	"Error al subir el fichero.",
-	"Error al borrar el fichero." )
+PORT = 50013
+ER_MSG = {
+	'01' : "Comando desconocido",
+	'02' : "Parametro inesperado. Se ha recibido un parametro donde no se esperaba",
+	'03' : "Falta parametro. Falta un parametro que no es opcional",
+	'04' : "Parametro con formato incorrecto",
+	'11' : "Usuario/contraseña incorrectos",
+	'12' : "El servidor no tiene espacio disponible para almacenar el video",
+	'13' : "No existe un video con ese identificador (13)",
+	'14' : "No existe un video con ese identificador (14)",
+	'15' : "No existe un video con ese identificador (15)",
+
+ }
 
 class Menu:
 	Upload, Download, Taglist, Tagasign, Search, Quit = range(1, 7)
@@ -28,7 +25,6 @@ class Menu:
 
 	def menu():
 		print( "+{}+".format( '-' * 37 ) )
-		print (5%2, " ",3/2)
 		for i,option in enumerate( Menu.Options, 1 ):
 			print( "| {}.- {:<32}|".format( i, option ) )
 		print( "+{}+".format( '-' * 37 ) )
@@ -46,7 +42,7 @@ class Menu:
 
 def iserror( message ):
 	if( message.startswith( "-ER" ) ):
-		code = int( message[4:5] )
+		code = message[4:6]
 		print( ER_MSG[code] )
 		return True
 	else:
@@ -77,16 +73,17 @@ if __name__ == "__main__":
 	s = socket.socket( socket.AF_INET, socket.SOCK_STREAM )
 	s.connect( (SERVER, PORT) )
 
-	"""while True:
+	while True:
 		user = input( "Introduce el nombre de usuario: " )
 		password = input( "Introduce la contraseña: " )
 		message = "{}#{}#{}\r\n".format( szasar.Command.Log, user, password )
 		s.sendall( message.encode() )
 		message = szasar.recvline(s).decode()
+		print(message)
 		if iserror( message ):
 			continue
 		break
-	"""
+	
 
 
 	while True:

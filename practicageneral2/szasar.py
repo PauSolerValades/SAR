@@ -28,17 +28,22 @@ def recvall( s, size ):
 
 
 def recvlined(s):
-	ready = select.select([s], [], [], TIMEOUT_TIME)
-	if ready[0]:
-		first = s.recv(SEND_SIZE)
-		if(first[:2].decode() == "-ER"):
-			return b"-ER#13"
-		file_size, file_data = first[4:].split("#")
 
-		file_size = file_size - len(file_data)
+	fin = 0
+	first = s.recv(SEND_SIZE)
+	if(first[:2].decode() == "-ER"):
+		return b"-ER#13"
+	
+	for i in first[4:]:
+		fin += 1
+		if(i == 35): # COmprobando ASCII (caritarefacherafacherita)
+			break
+	file_size = int(first[4:fin-1].decode())
+	file_data = first[fin+1]
+	file_size = file_size - len(file_data)
 
-		while file_size > len(file_data):
-				# asumiendo que recv no lee 0 (parece que es así)
-			file_data += s.recv(SEND_SIZE)
+	while file_size > len(file_data):
+			# asumiendo que recv no lee 0 (parece que es así)
+		file_data += s.recv(SEND_SIZE)
 
-		return b"+OK" + file_data
+	return b"+OK" + file_data
