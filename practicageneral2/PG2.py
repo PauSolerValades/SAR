@@ -1,17 +1,54 @@
+# -*- coding: utf-8 -*-
 import socket
 import sys
 import select
+import szasar
+import os
 
-case = 'INICIO'
 PORT = 50006
-IP = 'localhost'  # Es necesario escribir cual es la IP del servidor al que nos queremos conectar
+# Es necesario escribir cual es la IP del servidor al que nos queremos conectar
+IP = 'localhost'
 TIMEOUT_TIME = 60
 FILENAME = "video.txt"
 SEND_SIZE = 4096
 
 dir_serv = (IP, PORT)
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-logged = False
+ER_MSG = (
+	"Correcto.",
+	"Comando desconocido o inesperado.",
+	"Usuario desconocido.",
+	"Clave de paso o password incorrecto.",
+	"Error al crear la lista de ficheros.",
+	"El fichero no existe.",
+	"Error al bajar el fichero.",
+	"Un usuario anonimo no tiene permisos para esta operacion.", 
+	"El fichero es demasiado grande.",
+	"Error al preparar el fichero para subirlo.",
+	"Error al subir el fichero.",
+	"Error al borrar el fichero." )
+
+
+class Menu:
+	Quit, Upload, Download, Taglist, Tagasign, Search = range(1, 7)
+	Options = ("Cerrar sesion", "Subir video", "Descargar video","Lista de etiquetas de un video", "Asignar una etiqueta a un video", "Buscar un video")
+
+	def menu():
+		print( "+{}+".format( '-' * 30 ) )
+		for i,option in enumerate( Menu.Options, 1 ):
+			print( "| {}.- {:<25}|".format( i, option ) )
+		print( "+{}+".format( '-' * 30 ) )
+
+		while True:
+			try:
+				selected = int( input( "Selecciona una opcion: " ) )
+			except:
+				print( "Opcion no valida." )
+				continue
+			if 0 < selected <= len( Menu.Options ):
+				return selected
+			else:
+				print( "Opcion no valida." )
 
 def recive(datos):
     s.sendall(datos.encode())
@@ -75,7 +112,7 @@ def put(tVideo, fVideo):                 # PARAMETROS: TAMAÑO DE VIDEO + CONTEN
 
     msg = "PUT#" + filesize + "#"
 
-    #Aquí la función recive pero adapatada para enviar el fichero entero.
+    # Aquí la función recive pero adapatada para enviar el fichero entero.
     """ 
         Esto lo necesitamso reescribir porque no tenemos ni el path del fichero que queremos reconvertir ni tampoco podemos convertir los bytes del video en strings para después reconvertir-los.
     """
@@ -109,8 +146,7 @@ def tag(idVideo):
     respuesta = recive(entrada)                     # PARAMETROS ID VIDEO
                      # Obtener la lista de etiquetas de un vídeo
     if respuesta.startswith("+OK"):
-        array = respuesta.split("#")
-        array.pop(0)
+        array = respuesta[3:-2].split("#")
     else:
         print(err(respuesta))
 
@@ -138,14 +174,11 @@ def fnd(label):                         # PARAMETRif
 
 
 while True:
-    contador = 0                        # Utilizado para controlar todos los tipos de entrada que podemos tener (1,2 y 3 parametros)
-    entrada = input()
-    for caracter in entrada:
-        if caracter == "#":             # Recorremos el input contando cuantos parametros hay para que no salte el
-            contador = contador + 1     # error de split, al no poder asignar todas las variables
+    option = Menu.menu()
+    contador = 0                        # Utilizado para controlar todos los tipos de entrada que podemos tener (1,2 y 3 parametros)    # error de split, al no poder asignar todas las variables
 
    
-    if logged:
+    if option == Menu.Quit:
         if contador == 0:
             case = entrada                  
             if case == 'QIT':

@@ -27,7 +27,7 @@ def session( s ):
 		if not message:
 			return
 
-		if message.startswith( szasar.Command.User ):
+		if message.startswith( szasar.Command.Log ):
 			if( state != State.Identification ):
 				sendER( s )
 				continue
@@ -39,11 +39,11 @@ def session( s ):
 				sendOK( s )
 				state = State.Authentication
 
-		elif message.startswith( szasar.Command.Password ):
+		elif message.startswith( szasar.Command.Log ):
 			if state != State.Authentication:
 				sendER( s )
 				continue
-			if( user == 0 or PASSWORDS[user] == message[4:] ):
+			if( user == 0 or PASSWORDS[user] == message[9:] ):
 				sendOK( s )
 				state = State.Main
 			else:

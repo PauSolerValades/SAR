@@ -1,24 +1,22 @@
+import select,socket
+
+TIMEOUT_TIME = 60
+SEND_SIZE = 4096
+
 class Command:
-	User, Password, List, Download, Download2, Upload, Upload2, Delete, Exit = ("USER", "PASS", "LIST", "DOWN", "DOW2", "UPLO", "UPL2", "DELE", "EXIT")
+	Log, Put, Get, Tag, Set, Fnd, Quit = ("LOG", "PUT", "GET", "TAG", "SET", "FND", "QIT")
 
-def recvline( s, removeEOL = True ):
-	line = b''
-	CRreceived = False
-	while True:
-		c = s.recv( 1 )
-		if c == b'':
-			raise EOFError( "Connection closed by the peer before receiving an EOL." )
-		line += c
-		if c == b'\r':
-			CRreceived = True
-		elif c == b'\n' and CRreceived:
-			if removeEOL:
-				return line[:-2]
-			else:
-				return line
-		else:
-			CRreceived = False
+def recvline(s):                 # Iniciar sesión con el servidor
 
+    acc = b"" 
+    ready = select.select([s], [], [], TIMEOUT_TIME)
+    if ready[0]:
+        while True:
+            acc += s.recv(SEND_SIZE)
+            if(acc.endswith(b"\r\n")):
+                break
+        return acc
+		
 def recvall( s, size ):
 	message = b''
 	while( len( message ) < size ):
@@ -27,3 +25,20 @@ def recvall( s, size ):
 			raise EOFError( "Connection closed by the peer before receiving the requested {} bytes.".format( size ) )
 		message += chunk
 	return message
+
+
+def recvlined(s):
+	ready = select.select([s], [], [], TIMEOUT_TIME)
+	if ready[0]:
+		first = s.recv(SEND_SIZE)
+		if(first[:2].decode() == "-ER"):
+			return b"-ER#13"
+		file_size, file_data = first[4:].split("#")
+
+		file_size = file_size - len(file_data)
+
+		while file_size > len(file_data):
+				# asumiendo que recv no lee 0 (parece que es así)
+			file_data += s.recv(SEND_SIZE)
+
+		return b"+OK" + file_data
