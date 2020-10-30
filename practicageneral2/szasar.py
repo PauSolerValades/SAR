@@ -29,7 +29,7 @@ def recvall( s, size ):
 
 def recvlined(s):
 
-	fin = 0
+	fin = 4
 	first = s.recv(SEND_SIZE)
 	if(first[:2].decode() == "-ER"):
 		return b"-ER#13"
@@ -39,11 +39,15 @@ def recvlined(s):
 		if(i == 35): # COmprobando ASCII (caritarefacherafacherita)
 			break
 	file_size = int(first[4:fin-1].decode())
-	file_data = first[fin+1]
+	file_data = first[fin+1:]
 	file_size = file_size - len(file_data)
 
+	bucles = 0
 	while file_size > len(file_data):
 			# asumiendo que recv no lee 0 (parece que es así)
 		file_data += s.recv(SEND_SIZE)
+		bucles += 1
+
+	bytes_restantes = bucles*SEND_SIZE
 
 	return b"+OK" + file_data

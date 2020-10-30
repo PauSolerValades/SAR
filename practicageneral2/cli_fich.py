@@ -5,7 +5,7 @@ import szasar
 
 LINEA = ('-' * 39)
 SERVER = 'localhost'
-PORT = 50013
+PORT = 50008
 ER_MSG = {
 	'01' : "Comando desconocido",
 	'02' : "Parametro inesperado. Se ha recibido un parametro donde no se esperaba",
@@ -73,6 +73,8 @@ if __name__ == "__main__":
 	s = socket.socket( socket.AF_INET, socket.SOCK_STREAM )
 	s.connect( (SERVER, PORT) )
 
+
+	"""
 	while True:
 		user = input( "Introduce el nombre de usuario: " )
 		password = input( "Introduce la contraseña: " )
@@ -83,7 +85,7 @@ if __name__ == "__main__":
 		if iserror( message ):
 			continue
 		break
-	
+	"""
 
 
 	while True:
