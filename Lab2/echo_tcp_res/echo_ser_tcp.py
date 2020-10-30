@@ -2,7 +2,7 @@
 
 import socket, os
 
-PORT = 50008
+PORT = 50014
 SEND_SIZE = 4096
 
 
@@ -17,23 +17,21 @@ def recvlined(s):                 # Iniciar sesión con el servidor
 		fin += 1
 		if(i == 35):
 			break
-	file_size = int(first[4:fin-1].decode()) #ojo, puede que sea fin
-	file_data = first[fin+1:]
-	print(file_size)
+	file_size = int(first[4:(fin-1)].decode()) #ojo, puede que sea fin
+	file_data = first[(fin):]
 	#llegan 41881586 bytes en el otro lado :(. 2162-
 	#del segundo video: 381874 y llegan 380835. 1012.
-	file_size = file_size - len(file_data)
 
-	print(len(file_data))
+	done = len(file_data)
+
+	while done < file_size:
+
+		file_data += s.recv(SEND_SIZE)
+		done = len(file_data)
+
+		print(done, file_size)
 	
-	while True: #cambiarlo por un if i while True
-		file_data += s.recv(SEND_SIZE) #asumiendo que recv no lee 0 (parece que es así)
-		
-		if file_size > len(file_data):
-			file_data += s.recv(SEND_SIZE)
-			break
-	
-	print(len(file_data))
+	print("Escrito en el fichero después del while:", done)
 	return b"+OK" + file_data
 
 while True:

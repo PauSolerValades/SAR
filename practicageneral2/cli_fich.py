@@ -5,7 +5,7 @@ import szasar
 
 LINEA = ('-' * 39)
 SERVER = 'localhost'
-PORT = 50008
+PORT = 50014
 ER_MSG = {
 	'01' : "Comando desconocido",
 	'02' : "Parametro inesperado. Se ha recibido un parametro donde no se esperaba",
@@ -128,6 +128,7 @@ if __name__ == "__main__":
 				filesize = os.path.getsize( filename )
 				with open( filename, "rb" ) as f:
 					filedata = f.read()
+					print(len(filedata))
 			except:
 				print( "No se ha podido acceder al fichero {}.".format( filename ) )
 				continue
