@@ -69,7 +69,7 @@ while True:
 		msg = log()
 
 		if not iserror(msg):	
-			logged == True
+			logged = True
 		else
 			continue
 
@@ -160,6 +160,6 @@ while True:
 		message = "{}\r\n".format( szasar.Command.Quit )
 		s.sendall( message.encode() )							# Enviamos al servidor la peticion de desconexion para que sepa que vamos a cerrar el socket
 		message = szasar.recvline( s ).decode()					# Recibimos 
-		logged == False
+		logged = False
 
 s.close()
