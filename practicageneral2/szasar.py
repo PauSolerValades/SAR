@@ -27,27 +27,29 @@ def recvall( s, size ):
 	return message
 
 
-def recvlined(s):
+def recvline_file(s):
 
-	fin = 4
-	first = s.recv(SEND_SIZE)
-	if(first[:2].decode() == "-ER"):
-		return b"-ER#13"
+	fin = 3
+	first = s.recv(SEND_SIZE)			
+	if(first[:3].decode() == "-ER"):		#-ERXX
+		return b"-ER#13"					#01234
 	
-	for i in first[4:]:
+	for i in first[3:]:
 		fin += 1
-		if(i == 35): # COmprobando ASCII (caritarefacherafacherita)
+		if(i == 35): # Comprobando si i es # en ascii
 			break
-	file_size = int(first[4:fin-1].decode())
-	file_data = first[fin+1:]
+
+	file_size = int(first[3:fin-1].decode())
+	file_data = first[fin:]
 	file_size = file_size - len(file_data)
 
-	bucles = 0
-	while file_size > len(file_data):
-			# asumiendo que recv no lee 0 (parece que es así)
-		file_data += s.recv(SEND_SIZE)
-		bucles += 1
+	done = len(file_data)
+	while done < file_size:
 
-	bytes_restantes = bucles*SEND_SIZE
+		file_data += s.recv(SEND_SIZE)
+		done = len(file_data)
+
+		percent = round(done/file_size *100, 2)
+		print(percent, "%")
 
 	return b"+OK" + file_data

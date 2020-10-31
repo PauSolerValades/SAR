@@ -18,7 +18,7 @@ ER_MSG = {
 	'14' : "No existe un video con ese identificador (14)",
 	'15' : "No existe un video con ese identificador (15)",
 
- }
+}
 USERS = "+OKcipote#anal#cipote\r\n"
 filecount = 0
 lista = USERS[3:-2].split("#")

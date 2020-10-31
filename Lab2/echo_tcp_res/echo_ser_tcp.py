@@ -11,13 +11,13 @@ s.bind( ('', PORT) ) #assignar la dirección
 s.listen( 5 )
 
 def recvlined(s):                 # Iniciar sesión con el servidor
-	fin = 4
+	fin = 3
 	first = s.recv(SEND_SIZE) #hemos leido 4096 - 5 - loslbytes de size
-	for i in first[4:]:
+	for i in first[3:]:
 		fin += 1
 		if(i == 35):
 			break
-	file_size = int(first[4:(fin-1)].decode()) #ojo, puede que sea fin
+	file_size = int(first[3:(fin-1)].decode()) #ojo, puede que sea fin
 	file_data = first[(fin):]
 	#llegan 41881586 bytes en el otro lado :(. 2162-
 	#del segundo video: 381874 y llegan 380835. 1012.
@@ -29,7 +29,8 @@ def recvlined(s):                 # Iniciar sesión con el servidor
 		file_data += s.recv(SEND_SIZE)
 		done = len(file_data)
 
-		print(done, file_size)
+		percent = done/file_size *100
+		print(percent, "%")
 	
 	print("Escrito en el fichero después del while:", done)
 	return b"+OK" + file_data
