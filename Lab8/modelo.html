@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<script> 
+	function validation(){
+		
+		var username = document.form["myForm"]["uname"].value;
+		alert(username);
+	}
+		
+</script>
+	
+
+
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<!-- No olvides poner el nombre de tu fichero javascript en el atributo 'src' de la etiqueta 'script' -->
+		<script type="text/javascript">
+		
+		function validation(){
+		
+			var username = document.form["myForm"]["uname"].value;
+			alert(username);
+	}
+</script>
+	</head>
+	<body>
+
+		<form name="myForm" action="#">
+			<label for="uname">Usuario:</label>
+			<input type="text" id="uname" name="uname"><br><br>
+			<label for="email">Correo:</label>
+			<input type="text" id="email" name="email"><br><br>
+			<input type="checkbox" id="myCheck"> <br><br>
+			<textarea id="review" name="review" rows="4" cols="50"> <br><br>
+				escriu aquí la teva ressenya
+				</textarea> <br><br>
+			<input type="submit" value="Enviar" onclick="validation()">
+		  </form>
+
+	</body>
+
+</html>
