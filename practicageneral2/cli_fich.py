@@ -23,21 +23,21 @@ class Menu:															# Este menu aparece nada mas loggearse y despues de ej
 	Upload, Download, Taglist, Tagasign, Search, Quit = range(1, 7) # Sirve para seleccionar que funcion queremos usar con numeros del 1 al 7
 	Options = ("Subir video", "Descargar video","Lista de etiquetas de un video", "Asignar una etiqueta a un video", "Buscar un video","Cerrar sesion")
 
-def menu():														# Printea  un menu visual para que el usuario elija que quiere que haga el cliente
-	print( "+{}+".format( '-' * 37 ) )
-	for i,option in enumerate( Menu.Options, 1 ):
-		print( "| {}.- {:<32}|".format( i, option ) )
-	print( "+{}+".format( '-' * 37 ) )
-	while True:
-		try:
-			selected = int( input( "Selecciona una opción: " ) )
-		except:
-			print( "Opción no válida." )
-			continue
-		if 0 < selected <= len( Menu.Options ):
-			return selected
-		else:
-			print( "Opción no válida." )
+	def menu():														# Printea  un menu visual para que el usuario elija que quiere que haga el cliente
+		print( "+{}+".format( '-' * 37 ) )
+		for i,option in enumerate( Menu.Options, 1 ):
+			print( "| {}.- {:<32}|".format( i, option ) )
+		print( "+{}+".format( '-' * 37 ) )
+		while True:
+			try:
+				selected = int( input( "Selecciona una opción: " ) )
+			except:
+				print( "Opción no válida." )
+				continue
+			if 0 < selected <= len( Menu.Options ):
+				return selected
+			else:
+				print( "Opción no válida." )
 
 def iserror( message ):												# Esta funcion checkea la respuesta del servidor para determinar si devuelve error o okey.
 	if( message.startswith( "-ER" ) ):								# En caso de que devulva un error printeara una frase relacionada con el numero de error que
@@ -158,7 +158,9 @@ while True:
 	elif option == Menu.Quit:										# Esta funcion nos permite desconectarnos del servidor y cerrar el cliente
 		message = "{}\r\n".format( szasar.Command.Quit )
 		s.sendall( message.encode() )								# Enviamos al servidor la peticion de desconexion, para que el sepa que el siguiente comando deberiad de ser el de loggin
-		message = szasar.recvline( s ).decode()						# Recibimos el ok del servidor y establecemos el booleano logged a false para que el programa vuelva a entrar
-		logged = False												# En la definicion LOG para que vuelva a identificarse antes de poder utilizar mas comandos
+		message = szasar.recvline(s).decode()						# Recibimos el ok del servidor y establecemos el booleano logged a false para que el programa vuelva a entrar
+		logged = False
+		print ("La sesion se ha cerrado correctamente\n")
+		continue													# En la definicion LOG para que vuelva a identificarse antes de poder utilizar mas comandos
 
 s.close()

@@ -16,15 +16,6 @@ def recvline(s):                 # Iniciar sesión con el servidor
             if(acc.endswith(b"\r\n")):
                 break
         return acc
-		
-def recvall( s, size ):
-	message = b''
-	while( len( message ) < size ):
-		chunk = s.recv( size - len( message ) )
-		if chunk == b'':
-			raise EOFError( "Connection closed by the peer before receiving the requested {} bytes.".format( size ) )
-		message += chunk
-	return message
 
 
 def recvline_file(s):
@@ -43,13 +34,18 @@ def recvline_file(s):
 	file_data = first[fin:]
 	file_size = file_size - len(file_data)
 
+	contador = 0
+
 	done = len(file_data)
 	while done < file_size:
 
 		file_data += s.recv(SEND_SIZE)
 		done = len(file_data)
 
-		percent = round(done/file_size *100, 2)
-		print(percent, "%")
+		if contador % 100 == 0:
+			percent = round(done/file_size *100, 2)
+			print(percent, "%")
+		
+		contador += 1
 
 	return b"+OK" + file_data
