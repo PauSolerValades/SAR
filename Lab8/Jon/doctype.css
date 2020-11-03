@@ -1,0 +1,43 @@
+h1 {
+  text-align: center;
+  color: black;
+}
+
+h2 {
+  text-align: center;
+  color: black;
+}
+
+h3 {
+  text-align: center;
+}
+
+th {
+  border: 1px solid black;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: green;
+}
+
+td{
+  border: 1px solid black;
+  align-self: center;
+
+}
+
+.boxed {
+  background-color: green;
+  border: 1px solid green;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.boxed2{
+  border: 1px solid black;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}

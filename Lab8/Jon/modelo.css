@@ -1,0 +1,36 @@
+h1 {
+	text-align: center;
+	color: black;
+}
+
+h2 {
+	text-align: center;
+	color: black;
+} 
+
+h3 {
+	text-align: center;
+}
+
+.mySlides {
+	text-align: center;
+	display:none;
+}
+
+.input{
+	border: red;
+}
+
+.buttonStyle:hover{
+	background: grey;
+}
+
+
+
+.boxed {
+	background-color: green;
+	border: 1px solid green;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
