@@ -12,23 +12,38 @@ h3 {
   text-align: center;
 }
 
-th {
-  border: 1px solid black;
-  width: 300px;
+table {
   margin-left: auto;
   margin-right: auto;
-  background-color: green;
+  width: 30%;
+  height: 1px;
+  text-align: left;
+  border: 1px solid black;
+}
+
+th {
+  /*border: 1px solid black;*/
+  border-bottom: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  background-color: #9ae1cd;
 }
 
 td{
-  border: 1px solid black;
-  align-self: center;
+  border-top: transparent;
+  text-align: justify;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  
 
 }
 
 .boxed {
-  background-color: green;
-  border: 1px solid green;
+  background-color: #9ae1cd;
+  border: 1px solid #9ae1cd;
   width: 500px;
   margin-left: auto;
   margin-right: auto;

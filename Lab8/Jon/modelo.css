@@ -12,6 +12,22 @@ h3 {
 	text-align: center;
 }
 
+.text{
+	width: 60%;
+	height: 20px;
+}
+
+p{
+	text-align: center;
+	font-weight: bold;
+	font-size: large;
+}
+
+.coment {
+	width: 85%;
+	height:150px;
+}
+
 .mySlides {
 	text-align: center;
 	display:none;
@@ -19,6 +35,7 @@ h3 {
 
 .input{
 	border: red;
+
 }
 
 .buttonStyle:hover{
@@ -28,9 +45,11 @@ h3 {
 
 
 .boxed {
-	background-color: green;
-	border: 1px solid green;
-	width: 500px;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	background-color: 	#9ae1cd;
+	border: 1px solid 	black;
+	width: 25%;
 	margin-left: auto;
 	margin-right: auto;
 }
