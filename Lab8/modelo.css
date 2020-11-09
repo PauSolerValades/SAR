@@ -1,0 +1,55 @@
+h1 {
+	text-align: center;
+	color: black;
+}
+
+h2 {
+	text-align: center;
+	color: black;
+} 
+
+h3 {
+	text-align: center;
+}
+
+.text{
+	width: 60%;
+	height: 20px;
+}
+
+p{
+	text-align: center;
+	font-weight: bold;
+	font-size: large;
+}
+
+.coment {
+	width: 85%;
+	height:150px;
+}
+
+.mySlides {
+	text-align: center;
+	display:none;
+}
+
+.input{
+	border: red;
+
+}
+
+.buttonStyle:hover{
+	background: grey;
+}
+
+
+
+.boxed {
+	padding-top: 1%;
+	padding-bottom: 1%;
+	background-color: 	#9ae1cd;
+	border: 1px solid 	black;
+	width: 25%;
+	margin-left: auto;
+	margin-right: auto;
+}

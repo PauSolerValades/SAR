@@ -1,44 +1,31 @@
 <!DOCTYPE html>
 <html>
-
-	<script> 
-	function validation(){
-		
-		var username = document.form["myForm"]["uname"].value;
-		alert(username);
-	}
-		
-</script>
-	
-
-
+	<meta charset="UTF-8">
+	<script type = "text/javascript" src="modelo.js"></script>
 	<head>
-		<title></title>
-		<meta charset="UTF-8">
-		<!-- No olvides poner el nombre de tu fichero javascript en el atributo 'src' de la etiqueta 'script' -->
-		<script type="text/javascript">
+		<link rel="stylesheet" href="modelo.css">
+		<title>	
+			Libro de Visitas
+		</title>
 		
-		function validation(){
-		
-			var username = document.form["myForm"]["uname"].value;
-			alert(username);
-	}
-</script>
 	</head>
+
 	<body>
 
-		<form name="myForm" action="#">
-			<label for="uname">Usuario:</label>
-			<input type="text" id="uname" name="uname"><br><br>
-			<label for="email">Correo:</label>
-			<input type="text" id="email" name="email"><br><br>
-			<input type="checkbox" id="myCheck"> <br><br>
-			<textarea id="review" name="review" rows="4" cols="50"> <br><br>
-				escriu aquí la teva ressenya
-				</textarea> <br><br>
-			<input type="submit" value="Enviar" onclick="validation()">
-		  </form>
-
+		<h1><span>Libro de Visitas </span></h1>
+		<h2><span>Haz click <A href="doctype.html">aquí</A> si quierse ir a la lista de todos los comentarios</span></h2>
+		<h2><span>Añadir comentario</span></h2>
+		<form action="#" name="Form"><div class="boxed">
+		<p><label for="user">Nombre de usuario:</label><br>
+			<input type="text" id="userr" name="userr" class="text"><br><br>
+			<label for="text">Introduce tu email:</label><br>
+			<input type="text" id="email" name="email" onkeyup = "validateEmail()" class="text"><br><br>	
+			<input type="checkbox" id="checkbox" name="checkbox" value="Si" disabled = "true">
+			<label for="mail"> Hacer publica mi direccion de email</label><br><br>
+			<label for ="comentario">Comentario que deseas añadir: </label><br>
+			<textarea id="comentario" name="conentario" onmouseover="styl" class="coment"></textarea><br>
+			<input type = "button" id = "botton" class = "buttonStyle" value =  "Enviar" onclick="validateForm()"></button>
+		</p></div></form>
+		<?php include 'escribir.php';?>
 	</body>
-
 </html>
