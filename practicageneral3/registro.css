@@ -10,10 +10,37 @@
     font-size: 500%;
     color: white;
 }
+.form{
+    display: block;
+    margin-right: 25%;
+    margin-left: 25%;
+    text-align: left;
 
+}
 .text2{
-    align;
+    display: block;
+    text-align: center;
+    margin: auto;
     font-size: 300%;
+
+}
+
+.label{
+    float: left;
+}
+.span{
+    display: block;
+    overflow: hidden;
+    padding: 0px 4px 0px 6px;
+}
+
+.input{
+    width: ;
+}
+.text3{
+    display: block;
+    text-align: left;
+    font-size: large;
 
 }
 
