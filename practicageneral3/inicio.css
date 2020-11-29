@@ -31,8 +31,10 @@
     background-color: lightgray;
     border: 2px solid BLACK;
     width: 30%;
+    min-width: 450px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2%;
     padding-right: 2%;
     padding-left: 2%;
     padding-bottom: 2%;
@@ -49,13 +51,21 @@
 
 .info{
     display: grid;
+    gap: 2px;
     grid-template-columns: 30% 70%;
 }
+
+.info1{
+    text-align: left;
+    min-width: 80%;
+}
+
+
 
 .mapas{
     background-color: #3C4044;
     display: grid;
-    height: 30%;
+    height: 29%;
     grid-template-columns: 33% 33% 33%;
     align-items: center;
     justify-content: center;
