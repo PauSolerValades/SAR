@@ -27,14 +27,44 @@
    
 }
 
+.login{
+    background-color: lightgray;
+    border: 2px solid BLACK;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.datos{
+    color: black;
+    width: 70%;
+    height: 10%;
+
+    }
+
+.info{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
 .mapas{
     background-color: #3C4044;
     display: grid;
+    height: 30%;
     grid-template-columns: 33% 33% 33%;
     align-items: center;
     justify-content: center;
     border-top:yellowgreen;
     padding: 1%;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right: 0;
 }
 
 .text2{
@@ -51,17 +81,28 @@
 
 }
 
+.text4{
+    color: black;
+    margin: auto;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.text5{
+    text-align: left;
+    font-size: larger;
+    font-weight: bold;
+}
 .contenedor{
     display: block;
     text-align: center;
-
-
 }
 
 iframe{
     padding-top: 1%;
     width: 60%;
-    height: 300px;
+    height: 100%;
     border: 3px;
     text-align: center;
 }
