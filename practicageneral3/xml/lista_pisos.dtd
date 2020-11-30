@@ -1,0 +1,24 @@
+<!ELEMENT pisos (piso)*>
+<!ATTLIST pisos ult_id IDREF #REQUIRED>
+<!ELEMENT piso (direccion, precio, habitaciones, fianza, descripcion, tel, mail, nombre, fotos?, caracteristicas)>
+<!ATTLIST piso id ID #REQUIRED>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT habitaciones (#PCDATA)>
+<!ELEMENT fianza (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT tel (#PCDATA)>
+<!ELEMENT mail (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+
+<!ELEMENT fotos (foto)*>
+<!ATTLIST fotos ult_id IDREF #REQUIRED>
+<!ATTLIST fotos tiene (si|no) "no">
+<!ELEMENT foto (#PCDATA)>
+<!ATTLIST foto id ID #REQUIRED>
+
+<!ELEMENT caracteristicas (caracteristica)*>
+<!ATTLIST lavavajillas (1|0) "1">
+<!ATTLIST wifi (1|0) "1">
+<!ATTLIST terraza (1|0) "1">
+<!ATTLIST la (1|0) "1">
