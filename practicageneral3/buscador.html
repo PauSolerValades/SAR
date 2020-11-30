@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="inicio.css" type="text/css">
+<link rel="stylesheet" href="buscador.css" type="text/css">
 <html>
     <head>
         <title>Ostatu - UPV/EHU</title>
@@ -10,26 +10,14 @@
                 <a title = "UPV" href="https://www.ehu.eus/es/"><img class = "image" src = "log.png" alt = "logo"></a>
                 <span class = "text1">OSTATU</span>
         </div><br><br>
-        <div class = "login">
-            <span class = "text4">INICIAR SESION</span><br><br>
-            <div class = "info">  
-                <div class="info1"><span class = "text5">USUARIO</span><br>
-                <input type = "text" id = "user" class = "datos" placeholder="Numero de usuario"><br><br>
-                <span class = "text5">CONTRASEÑA</span><br>
-                <input type = "password" id = "password" class = "datos" placeholder="Contraseña"><br><br>
-                <button type="button">Acceder</button>
-                </div>
-                
-                <div class="info1" style = "text-align: justify;">
-                    <span class = "text5">Introduccion</span><br>
-                    El Servicio de Alojamiento de cada Campus a través de esta aplicación ayuda a los alumnos, PAS y PDI en la búsqueda de información de alquiler de pisos y/o habitaciones donde alojarse durante el período de estudios. Así mismo, a través de este Servicio se informa de cómo ofertar pisos/habitaciones a las personas interesadas.<br>
-                    <br><span class = "text5">Acceso</span><br>
-                    Si eres alumno, PAS o PDI de la UPV/EHU puedes acceder mediante tu cuenta y contraseña de LDAP, en caso contrario, puedes solicitar el acceso haciendo click <a href="registo.html"> aqui</a>.
-                </div><br>
+        <div class = "search">
+            <div class = "provincia">
+                <div><button class="button">ARABA</button></div>
+                <div><button class="button">GIPUZKOA</button></div>
+                <div><button class="button">BIZKAIA</button></div>
             </div>
-            <span class = "text4">¿OFRECES ALOJAMIENTO?</span><br>
-            <span>En este espacio podras ofertas tus pisos para que estudiante de la UPV/EHU lo alquilen</span><br>
-            <a href="reglamento.pdf"><span class="text5">Condiciones de uso</span></a>
+            <hr class="linea">
+            <span class = "text4">FILTROS</span>
         </div>
         <div class = "mapas">
             <div class = "contenedor" >
@@ -56,7 +44,3 @@
 
             </div>
         </div>
-    </body>
-
-
-</html>
