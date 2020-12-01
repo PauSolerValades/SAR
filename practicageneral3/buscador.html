@@ -15,29 +15,43 @@
             <span class = "text4">FILTROS</span>
             <hr class="linea">
             <div class = "provincia">
-                <div><button class="button">ARABA</button></div>
-                <div><button class="button">GIPUZKOA</button></div>
-                <div><button class="button">BIZKAIA</button></div>
+                <div class="toggle-radio" >
+                    <input type="radio" name ="provincia"  id = "araba">
+                    <label for="araba">ARABA</label>
+                    <input type="radio" name ="provincia" id = "gipuzkoa">
+                    <label for="gipuzkoa">GIPUZKOA</label>
+                    <input type="radio" name ="provincia" id = "bizkaia">
+                    <label for="bizkaia">BIZKAIA</label>
+                </div>
             </div>
             <div class = "boxed">
-                <div class="busqueda">
-                    <div class="precio">
-                        <span style = "font-size: large;">Precio:</span>&nbsp;
-                        <input name="precio"  id="precio" type = "range" class="slider" oninput="sliderChange(this.value)" max="900"> 
-                        <text id="valor">0</text>&nbsp;&nbsp;
-                        <span style="font-size: large;">Habitaciones:</span>
-                        <select style="margin-right: 3%;" style="font-size: large;">
+                    <form class="precio">
+                        <span class = "text5" style="margin-left: 4%;">Precio:</span>&nbsp;
+                        <input name="precio"  id="precio" type = "range" class="slider" oninput="sliderChange(this.value)" max="1200" value="0"> 
+                        <text id="valor" class = "valor">0€</text>
+                        <span class = "text5" style="margin-left: 4%;">Fecha inicio:</span>
+                        <input type="date" id = "inicio" min="01-01-2020" max = "31-12-2020" style="width: 130px;">
+                        <span class = "text5"  style="margin-left: 4%;">Fecha final:</span>
+                        <input type="date" id = "inicio" min="01-01-2020" max = "31-12-2021" style="width: 130px;"><br><br>
+                        <span class = "text5" style="margin-left: 20%;">Habitaciones:</span>
+                        <select style="margin-right: 1%;" class = "text5">
+                            <option>-</option>
                             <option >1</option>
                             <option>2</option>
                             <option>3</option>
                             <option>4 ó +</option>
                         </select>
-                        <span style="font-size: large;">Fecha inicio:</span>
-                        <input type="date" id = "inicio" min="01-01-2020" max = "31-12-2020">
-                        <span style="font-size: large;">Fecha final:</span>
-                        <input type="date" id = "inicio" min="01-01-2020" max = "31-12-2021"> 
-                    </div>
-                </div>
+                        <span class = "text5" style="margin-left: 4%;" style="margin-right: 0.5%;">Baños:</span>
+                        <select style="margin-right: 4%;" class = "text5">
+                            <option>-</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                        <span class = "text5" style="margin-right: 1%;">Términos:</span>
+                        <input type="text" placeholder="¿Que quiéres buscar? " style="width: 150px;" style="height: 18px;" >
+                    </form>
+                    <input type="button" class="boton" value="BUSCAR">
             </div>  
             
         </div>
