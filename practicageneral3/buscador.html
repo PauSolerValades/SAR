@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="buscador.css" type="text/css">
+<script type = "text/javascript" src="buscador.js"></script>
 <html>
     <head>
         <title>Ostatu - UPV/EHU</title>
@@ -18,9 +19,26 @@
                 <div><button class="button">GIPUZKOA</button></div>
                 <div><button class="button">BIZKAIA</button></div>
             </div>
-            
-            <div class = "boxed"> 
-            </div>
+            <div class = "boxed">
+                <div class="busqueda">
+                    <div class="precio">
+                        <span style = "font-size: large;">Precio:</span>&nbsp;
+                        <input name="precio"  id="precio" type = "range" class="slider" oninput="sliderChange(this.value)" max="900"> 
+                        <text id="valor">0</text>&nbsp;&nbsp;
+                        <span style="font-size: large;">Habitaciones:</span>
+                        <select style="margin-right: 3%;" style="font-size: large;">
+                            <option >1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4 ó +</option>
+                        </select>
+                        <span style="font-size: large;">Fecha inicio:</span>
+                        <input type="date" id = "inicio" min="01-01-2020" max = "31-12-2020">
+                        <span style="font-size: large;">Fecha final:</span>
+                        <input type="date" id = "inicio" min="01-01-2020" max = "31-12-2021"> 
+                    </div>
+                </div>
+            </div>  
             
         </div>
         <div class = "mapas">
