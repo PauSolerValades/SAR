@@ -3,11 +3,13 @@
 
 <pisos ult_id="9">
     <piso id = "1">
-        <direccion>noseque kalea</direccion>
+        <direccion prov="A">noseque kalea</direccion>
         <precio>300</precio>
         <habitaciones> 2 </habitaciones>
         <fianza> 600 </fianza>
         <descripcion> este piso claramente no existse, quiero decir, tu has visto el precio? </descripcion>
+        <fechaIn>01/09/20</fechaIn>
+        <fechaFin>01/06/21</fechaFin>
         <tel>6666666</tel>
         <nombre>Aitor tilla</nombre>
         <mail>satan@atana.xsa</mail>
