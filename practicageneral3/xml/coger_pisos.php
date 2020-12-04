@@ -1,5 +1,8 @@
 <?php
   $pisos = simplexml_load_file('libro_visitas.xml');
+  $lista_pisos=[]
+  filtrado();
+  display($lista_pisos);
 
   
   function filtrado($provEsc,$precMax,$habEsc,$fechaInEsc,$fechaFinEsc){
@@ -12,15 +15,15 @@
            abs($fechaInEsc-$piso->fechaIn)<30 && 
            abs($fechaFinEsc-$piso->fechaFin)<30)
            {
-            $mail = $piso->email;
+            $lista_pisos[$lista_pisos.length()]=$piso
         }
-        echo('<th><p id="demo">'.$piso->fecha . '     ' . $piso->nombre. "             ".$mail.'</p></th><br>');
-        echo('</tr>');
-        echo('<tr>');
-        echo('<td>'.$piso->comentario.'</td></tr></table>');
     }
   }
-  function display(){
+
+
+
+  
+  function display($lista_pisos){
 
 
 
