@@ -12,15 +12,29 @@
 }
 .form{
     display: block;
-    margin-right: 25%;
-    margin-left: 25%;
     text-align: left;
 
 }
+
+.cols{
+    margin-top: -20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
+.box{
+    margin-top: 0%;
+    width: 37%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .text2{
     display: block;
+    margin-top: -30px;
     text-align: center;
-    margin: auto;
     font-size: 300%;
 
 }
@@ -28,15 +42,12 @@
 .label{
     float: left;
 }
-.span{
+.info{
+    font-size: larger;
     display: block;
-    overflow: hidden;
-    padding: 0px 4px 0px 6px;
+    padding-top: 10px;
 }
 
-.input{
-    width: ;
-}
 .text3{
     display: block;
     text-align: left;
@@ -56,4 +67,93 @@
     padding-top: 1%;
     padding-bottom: 1%;
     min-width: 960px;
+}
+
+label{
+    display: inline-block;
+    width: 170px;
+    font-size: large;
+}
+
+.form-group{
+    margin-top: 15px;
+    
+}
+
+option{
+    font-size: medium;
+}
+
+select{
+    font-size: large;
+    width:170px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+label + textarea{
+    vertical-align: middle;
+}
+input{
+    width: 170px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+textarea{
+    width: 170px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.mapas{
+    background-color: #3C4044;
+    display: grid;
+    height: 29%;
+    grid-template-columns: 33% 33% 33%;
+    align-items: center;
+    justify-content: center;
+    border-top:yellowgreen;
+    padding: 1%;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right: 0;
+}
+
+.texta{
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+    padding-left: 2%;
+
+}
+
+.text3b{
+    color: white;
+
+}
+
+.contenedor{
+    display: block;
+    text-align: center;
+}
+
+iframe{
+    padding-top: 1%;
+    width: 60%;
+    height: 100%;
+    border: 3px;
+    text-align: center;
+}
+
+.enviar{
+    margin-top: 10px ;
+    float: right;
+    width: fit-content;
+    font-size: x-large;
 }
