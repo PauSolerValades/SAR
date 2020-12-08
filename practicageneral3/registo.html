@@ -9,7 +9,7 @@
 
 <body>
     <div class="cabecera">
-        <a title="UPV" href="https://www.ehu.eus/es/"><img class="image" src="log.png" alt="logo"></a>
+        <a title="UPV" href="https://www.ehu.eus/es/"><img class="image" src="Images/log.png" alt="logo"></a>
         <span class="text1">OSTATU</span>
     </div><br><br>
     <div class="box">
@@ -35,8 +35,8 @@
                     </div>
                     <div class="form-group">
                         <label for="telefono">Telefono:</label>
-                        <input name="telefono" id="telefono" type="tel" pattern="[6,7]{1}[0-9]{8}" title="Un numero de telefono debe de estar
-                        formado por 9 digitos númericos y comenzar por los dígitos 6 ó 7">
+                        <input name="telefono" id="telefono" type="tel" pattern="^\+(?:[0-9]●?){6,14}[0-9]$" title="Un numero de telefono debe de estar
+                        formado por dígitos y el simbolo +">
                     </div>
                     <div class="form-group">
                         <label for="relacion" style="vertical-align: middle;">Relacion con la universidad:</label>
@@ -73,7 +73,7 @@
                 </div>
             </form>
             <div>
-                <span class="info">Si eres alumno, PAS o PDI de la UPV/EHU no necesitas registrarte.</span><br>
+                <span class="info">Si eres alumno, PAS o PDI de la UPV/EHU no necesitas registrarte. <a href="inicio.html">Clicka aquí</a> para iniciar sesión</span><br>
                 <span class="info">Puedes consultar tu usuario y contraseña de LDAP a través de GAUR.</span><br>
                 <span class="info">Si optas por la opción de Registro, la cuenta te caducará en un corto plazo de tiempo
                     definido por la Oficina del Servicio de alojamiento.</span>
