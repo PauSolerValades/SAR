@@ -1,11 +1,12 @@
 <!ELEMENT pisos (piso)*>
 <!ATTLIST pisos ult_id IDREF #REQUIRED>
-<!ELEMENT piso (direccion, precio, habitaciones, fianza, descripcion,fechaIn,fechaFin, tel, mail, nombre, fotos?, caracteristicas)>
+<!ELEMENT piso (direccion, precio, habitaciones, banos, fianza, descripcion,fechaIn,fechaFin, tel, mail, nombre, fotos?, caracteristicas)>
 <!ATTLIST piso id ID #REQUIRED>
 <!ELEMENT direccion (#PCDATA)>
 <!ATTLIST direccion prov (A|B|C) #REQUIRED>
 <!ELEMENT precio (#PCDATA)>
 <!ELEMENT habitaciones (#PCDATA)>
+<!ELEMENT banos (#PCDATA)>
 <!ELEMENT fianza (#PCDATA)>
 <!ELEMENT descripcion (#PCDATA)>
 <!ELEMENT fechaIn (#PCDATA)>
