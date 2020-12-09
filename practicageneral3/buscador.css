@@ -24,6 +24,7 @@
 
 }
 .boton{
+    text-align: center;
     align-items: right;
     background-color: #3C4044;
     color: white;
@@ -32,6 +33,7 @@
     margin-top: 4.5%;
     font-size: 55px;
     cursor: pointer;
+    width: 230px;
     
 
 }
