@@ -1,6 +1,6 @@
 <?php
-  $pisos = simplexml_load_file('libro_visitas.xml');
-  $lista_pisos=[]
+  $pisos = simplexml_load_file('lista_pisos.xml');
+  
   filtrado();
   display($lista_pisos);
 
@@ -15,12 +15,21 @@
         abs($fechaInEsc-$piso->fechaIn)<30 || isset($piso->fechaIn)  && 
         abs($fechaFinEsc-$piso->fechaFin)<30 || isset($piso->fechaFin))
       {
-          display($piso)
+          display($piso);
       }
     }
   }
 ?>
 
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+  </head>
+  <body>
+    <h1> polla </h1>
+  </body>
+</html>
 
 
 
