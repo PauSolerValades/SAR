@@ -18,12 +18,12 @@
   $hab = trim($_GET['hab']);
   $bath = trim($_GET['bath']);
  
+  
+  filtrado($pisos,$provincia, $precio, $hab, $bath, $inicio, $final);
 
-  filtrado($provincia, $precio, $hab, $bath, $inicio, $final);
-  display($pisos);
 
   
-  function filtrado($provincia, $precMax, $habEsc, $bath, $fechaInEsc, $fechaFinEsc){
+  function filtrado($pisos,$provincia, $precMax, $habEsc, $bath, $fechaInEsc, $fechaFinEsc){
     //si quero hacer busqueda general habesc=0 preciomax>10000 fechas=0
     //la fecha le quitamos la barra para operar
     foreach($pisos->piso as $piso){
@@ -56,6 +56,5 @@
 <?php
   function display($piso){
     echo ('<h1>Hola'.$piso->habitaciones.'</h1>');
-    echo ($pisos);
   }
   ?>
