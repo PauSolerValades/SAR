@@ -1,3 +1,4 @@
+  
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE visitas SYSTEM "lista_pisos.dtd">
 
@@ -14,9 +15,202 @@
         <tel>6666666</tel>
         <nombre>Aitor tilla</nombre>
         <mail>satan@atana.xsa</mail>
+        <fotos ult_id = "2" tiene = "si">
+            <foto id = "1">Images/pisos/a.jpg</foto>
+            <foto id = "0">Images/pisos/b.jpg</foto>
+        </fotos>
+        <caracteristicas 
+            lavavajillas="0"
+            wifi = "1"
+            terraza = "1"
+            lavadora = "1"        
+            >
+        </caracteristicas>
+    </piso>
+
+    <piso id = "2">
+        <direccion prov="A">Jaumet del cul tet kalea</direccion>
+        <precio>350</precio>
+        <habitaciones> 2 </habitaciones>
+        <banos> 1 </banos>
+        <fianza> 900 </fianza>
+        <descripcion>Mis commits son aaaaaaaaaaaaaaaaaaaaaaaaa sí de buenos</descripcion>
+        <fechaIn>200901</fechaIn>
+        <fechaFin>210601</fechaFin>
+        <tel>7777777</tel>
+        <nombre>Elba lazo</nombre>
+        <mail>elba@lazo.com</mail>
         <fotos ult_id = "0" tiene = "si">
-            <foto id = "0">url1</foto>
-            <foto id = "1">url2</foto>
+            <foto id = "0">Images/pisos/c.jpg</foto>
+        </fotos>
+        <caracteristicas 
+            lavavajillas="0"
+            wifi = "1"
+            terraza = "1"
+            lavadora = "1"        
+            >
+        </caracteristicas>
+    </piso>
+
+    <piso id = "3">
+        <direccion prov="A">Gran via de les corts catalanes</direccion>
+        <precio>460</precio>
+        <habitaciones> 4 </habitaciones>
+        <banos> 3 </banos>
+        <fianza> 1000 </fianza>
+        <descripcion>quiero, montarme en tu velero, ponerte el sombrero</descripcion>
+        <fechaIn>210101</fechaIn>
+        <fechaFin>210601</fechaFin>
+        <tel>88888888</tel>
+        <nombre>Maria maria maria</nombre>
+        <mail>maria@maria.maria</mail>
+        <fotos ult_id = "0" tiene = "si">
+            <foto id = "0">Images/pisos/d.jpg</foto>
+        </fotos>
+        <caracteristicas 
+            lavavajillas="0"
+            wifi = "1"
+            terraza = "1"
+            lavadora = "1"        
+            >
+        </caracteristicas>
+    </piso>
+
+    <piso id = "4">
+        <direccion prov="G">Euskereaerearesakearae</direccion>
+        <precio>290</precio>
+        <habitaciones> 2 </habitaciones>
+        <banos> 0 </banos>
+        <fianza> 300 </fianza>
+        <descripcion>El baño es compartido con los vecinos de al lado.</descripcion>
+        <fechaIn>210101</fechaIn>
+        <fechaFin>210601</fechaFin>
+        <tel>999999999</tel>
+        <nombre>Ander Carrera</nombre>
+        <mail>acr1200.csmm@gmail.com</mail>
+        <fotos ult_id = "0" tiene = "si">
+            <foto id = "0">Images/pisos/e.jpg</foto>
+        </fotos>
+        <caracteristicas 
+            lavavajillas="0"
+            wifi = "1"
+            terraza = "1"
+            lavadora = "1"        
+            >
+        </caracteristicas>
+    </piso>
+
+    <piso id = "5">
+        <direccion prov="G">zaldurndegei gei</direccion>
+        <precio>1500</precio>
+        <habitaciones> 5 </habitaciones>
+        <banos> 3 </banos>
+        <fianza> 3000 </fianza>
+        <descripcion>Esta super mal ubicado, no tiene sentido</descripcion>
+        <fechaIn>200901</fechaIn>
+        <fechaFin>210601</fechaFin>
+        <tel>111111111</tel>
+        <nombre>Jon Travolta Ortiz</nombre>
+        <mail>pipo@pipo.com</mail>
+        <fotos ult_id = "0" tiene = "si">
+            <foto id = "0">Images/pisos/f.jpg</foto>
+        </fotos>
+        <caracteristicas 
+            lavavajillas="0"
+            wifi = "1"
+            terraza = "1"
+            lavadora = "1"        
+            >
+        </caracteristicas>
+    </piso>
+
+    <piso id = "6">
+        <direccion prov="G">ubunto street 17</direccion>
+        <precio>370</precio>
+        <habitaciones> 4 </habitaciones>
+        <banos> 1 </banos>
+        <fianza> 666 </fianza>
+        <descripcion>gonna take my a lot to drag my away from you. </descripcion>
+        <fechaIn>210101</fechaIn>
+        <fechaFin>210601</fechaFin>
+        <tel>22222222</tel>
+        <nombre>Jorge Salazar</nombre>
+        <mail>jorge.autista@gmail.com</mail>
+        <fotos ult_id = "0" tiene = "si">
+            <foto id = "0">Images/pisos/g.jpg</foto>
+        </fotos>
+        <caracteristicas 
+            lavavajillas="0"
+            wifi = "1"
+            terraza = "1"
+            lavadora = "1"        
+            >
+        </caracteristicas>
+    </piso>
+
+    <piso id = "7">
+        <direccion prov="B">Avinguda garraf num 11</direccion>
+        <precio>2500</precio>
+        <habitaciones> 5 </habitaciones>
+        <banos> 3 </banos>
+        <fianza> 4000 </fianza>
+        <descripcion>No tinc un puto duro hostia</descripcion>
+        <fechaIn>200901</fechaIn>
+        <fechaFin>210601</fechaFin>
+        <tel>555555555</tel>
+        <nombre>Pau ce truncada</nombre>
+        <mail>ooooooo.aaaa@gmail.com</mail>
+        <fotos ult_id = "0" tiene = "si">
+            <foto id = "0">Images/pisos/h.jpg</foto>
+            <foto id = "1">Images/pisos/i.jpg</foto>
+        </fotos>
+        <caracteristicas 
+            lavavajillas="0"
+            wifi = "1"
+            terraza = "1"
+            lavadora = "1"        
+            >
+        </caracteristicas>
+    </piso>
+
+    <piso id = "8">
+        <direccion prov="B">Ninininininininininininin kalea</direccion>
+        <precio>340</precio>
+        <habitaciones> 2 </habitaciones>
+        <banos> 1 </banos>
+        <fianza> 800 </fianza>
+        <descripcion>Tienes una vela jorge. Para qué quieres una vela? Para qué quieres el vaso</descripcion>
+        <fechaIn>210101</fechaIn>
+        <fechaFin>210601</fechaFin>
+        <tel>88888888</tel>
+        <nombre>Maria maria maria</nombre>
+        <mail>maria@maria.maria</mail>
+        <fotos ult_id = "0" tiene = "si">
+            <foto id = "0">Images/pisos/j.jpg</foto>
+        </fotos>
+        <caracteristicas 
+            lavavajillas="0"
+            wifi = "1"
+            terraza = "1"
+            lavadora = "1"        
+            >
+        </caracteristicas>
+    </piso>
+
+    <piso id = "9">
+        <direccion prov="B">OpenGl kalea</direccion>
+        <precio>500</precio>
+        <habitaciones> 4 </habitaciones>
+        <banos> 3 </banos>
+        <fianza> 1000 </fianza>
+        <descripcion>No quejarse del precio que con lo cara que va la memória lo he puesto donde más duele</descripcion>
+        <fechaIn>200901</fechaIn>
+        <fechaFin>210601</fechaFin>
+        <tel>666 666 666</tel>
+        <nombre>Joseba Makazaga</nombre>
+        <mail>ios@faks.com</mail>
+        <fotos ult_id = "0" tiene = "si">
+            <foto id = "0">Images/pisos/k.jpg</foto>
         </fotos>
         <caracteristicas 
             lavavajillas="0"
