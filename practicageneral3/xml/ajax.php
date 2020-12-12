@@ -3,7 +3,7 @@
 	
 	// Verificar que ha sido enviado el 'id' que identifica al comentario
 	//  y que existe el fichero XML con la lista de comentarios
-	if(isset($_GET['id']) && )isset($_GET['fotoId'])
+	if(isset($_GET['id']) && isset($_GET['fotoId']))
 	{
         $id=$_GET['id'];
         $fotoId=$_GET['fotoId'];
