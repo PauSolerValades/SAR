@@ -1,3 +1,26 @@
+<!DOCTYPE HTML>
+<link rel="stylesheet" href="pisos.css" type="text/css">
+<html>
+  <head>
+    <title>Ostatu - UPV/EHU</title>
+    <meta charset="UTF-8"> 
+  </head>
+  <body>
+  <div class="cabecera">
+        <a title="UPV" href="https://www.ehu.eus/es/"><img class="image" src="log.png" alt="logo"></a>
+        <span class="text1">OSTATU</span>
+    </div>
+    <div style = "margin-top:%">
+    <?php
+    function display($piso){
+    echo ('<span style = "margin-top:10%">Hola'.$piso->direccion.' el piso este es el º y va mas o menos bien </span>');
+    echo ('<h1>Hola'.$piso->precio.'</h1>');
+    echo ('<h1>Hola'.$piso->habitaciones.'</h1>');
+    echo ('<h1>Hola'.$piso->banos.'</h1><br><br>');
+  }
+  ?>
+  
+</div>
 <?php
   $pisos = simplexml_load_file('lista_pisos.xml');
   
@@ -40,29 +63,10 @@
   }
 ?>
 
-<!DOCTYPE HTML>
 
-<html>
-  <head>
-    <title>Ostatu - UPV/EHU</title>
-    <meta charset="UTF-8">
-  </head>
-  <body>
-  <div class="cabecera">
-        <a title="UPV" href="https://www.ehu.eus/es/"><img class="image" src="Images/log.png" alt="logo"></a>
-        <span class="text1">OSTATU</span>
-    </div><br><br>
-    <?php
-    global $count=0
-  function display($piso){
-    $count ++
-    echo ('<h1>Hola'.$piso->direccion.' el piso este es el '.$count.'º y va mas o menos bien </h1>');
-    echo ('<h1>Hola'.$piso->precio.'</h1>');
-    echo ('<h1>Hola'.$piso->habitaciones.'</h1>');
-    echo ('<h1>Hola'.$piso->banos.'</h1><br><br>');
-  }
-  ?>
-  <div class="mapas">
+
+
+<div class="mapas">
         <div class="contenedor">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1060.0194745260221!2d-2.66946235879262!3d42.83964987697573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4fc2708677f32b%3A0x37980e0652a5437e!2sPabell%C3%B3n%20Universitario!5e1!3m2!1ses!2ses!4v1606603271126!5m2!1ses!2ses"></iframe>
