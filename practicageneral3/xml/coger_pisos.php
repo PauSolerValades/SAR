@@ -53,8 +53,13 @@
         <span class="text1">OSTATU</span>
     </div><br><br>
     <?php
+    global $count=0
   function display($piso){
+    $count ++
+    echo ('<h1>Hola'.$piso->direccion.' el piso este es el '.$count.'º y va mas o menos bien </h1>');
+    echo ('<h1>Hola'.$piso->precio.'</h1>');
     echo ('<h1>Hola'.$piso->habitaciones.'</h1>');
+    echo ('<h1>Hola'.$piso->banos.'</h1><br><br>');
   }
   ?>
   <div class="mapas">
