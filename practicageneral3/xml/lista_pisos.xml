@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE visitas SYSTEM "lista_pisos.dtd">
-<pisos ult_id="9">
-    <piso id = "1">
-        <direccion prov="A">noseque kalea</direccion>
-        <precio>300</precio>
-        <habitaciones> 2</habitaciones>
-        <banos> 1 </banos>
-        <fianza> 600 </fianza>
-        <descripcion> este piso claramente no existse, quiero decir, tu has visto el precio? </descripcion>
-        <fechaIn>20000901</fechaIn><fechaFin>20010601</fechaFin><tel>6666666</tel><nombre>Aitor tilla</nombre>
-        <mail>satan@atana.xsa</mail>
-        <fotos ult_id = "2" tiene = "si">   
-            <foto id = "1">Images/pisos/a.jpg</foto>
-            <foto id = "0">Images/pisos/b.jpg</foto>
-         </fotos>
-        <caracteristicas 
-            lavavajillas="0" 
-            wifi = "1"  
-            terraza = "1" 
-            lavadora = "1">
-        </caracteristicas>
-    </piso>
+<pisos ult_id="9"><piso id = "1"><direccion prov="A">noseque kalea</direccion><precio>300</precio><habitaciones> 2</habitaciones><banos> 1 </banos><fianza> 600 </fianza><descripcion> este piso claramente no existse, quiero decir, tu has visto el precio? </descripcion><fechaIn>20000901</fechaIn><fechaFin>20010601</fechaFin><tel>6666666</tel><nombre>Aitor tilla</nombre><mail>satan@atana.xsa</mail><fotos ult_id = "2" tiene = "si"><foto id = "1">Images/pisos/a.jpg</foto><foto id = "0">Images/pisos/b.jpg</foto></fotos><caracteristicas lavavajillas="0" wifi = "1" terraza = "1" lavadora = "1"></caracteristicas></piso>
 
     <piso id = "2">
         <direccion prov="A">Jaumet del cul tet kalea</direccion>
@@ -29,8 +9,8 @@
         <banos> 1 </banos>
         <fianza> 900 </fianza>
         <descripcion>Mis commits son aaaaaaaaaaaaaaaaaaaaaaaaa sí de buenos</descripcion>
-        <fechaIn>20100101</fechaIn>
-        <fechaFin>20100601</fechaFin>
+        <fechaIn>200901</fechaIn>
+        <fechaFin>210601</fechaFin>
         <tel>7777777</tel>
         <nombre>Elba lazo</nombre>
         <mail>elba@lazo.com</mail>
@@ -53,8 +33,8 @@
         <banos> 3 </banos>
         <fianza> 1000 </fianza>
         <descripcion>quiero, montarme en tu velero, ponerte el sombrero</descripcion>
-        <fechaIn>20100101</fechaIn>
-        <fechaFin>20100601</fechaFin>
+        <fechaIn>210101</fechaIn>
+        <fechaFin>210601</fechaFin>
         <tel>88888888</tel>
         <nombre>Maria maria maria</nombre>
         <mail>maria@maria.maria</mail>
@@ -77,8 +57,8 @@
         <banos> 0 </banos>
         <fianza> 300 </fianza>
         <descripcion>El baño es compartido con los vecinos de al lado.</descripcion>
-        <fechaIn>20100101</fechaIn>
-        <fechaFin>20100601</fechaFin>
+        <fechaIn>210101</fechaIn>
+        <fechaFin>210601</fechaFin>
         <tel>999999999</tel>
         <nombre>Ander Carrera</nombre>
         <mail>acr1200.csmm@gmail.com</mail>
@@ -101,8 +81,8 @@
         <banos> 3 </banos>
         <fianza> 3000 </fianza>
         <descripcion>Esta super mal ubicado, no tiene sentido</descripcion>
-        <fechaIn>20100101</fechaIn>
-        <fechaFin>20100601</fechaFin>
+        <fechaIn>200901</fechaIn>
+        <fechaFin>210601</fechaFin>
         <tel>111111111</tel>
         <nombre>Jon Travolta Ortiz</nombre>
         <mail>pipo@pipo.com</mail>
@@ -125,8 +105,8 @@
         <banos> 1 </banos>
         <fianza> 666 </fianza>
         <descripcion>gonna take my a lot to drag my away from you. </descripcion>
-        <fechaIn>20100101</fechaIn>
-        <fechaFin>20100601</fechaFin>
+        <fechaIn>210101</fechaIn>
+        <fechaFin>210601</fechaFin>
         <tel>22222222</tel>
         <nombre>Jorge Salazar</nombre>
         <mail>jorge.autista@gmail.com</mail>
@@ -174,8 +154,8 @@
         <banos> 1 </banos>
         <fianza> 800 </fianza>
         <descripcion>Tienes una vela jorge. Para qué quieres una vela? Para qué quieres el vaso</descripcion>
-        <fechaIn>20100101</fechaIn>
-        <fechaFin>20100601</fechaFin>
+        <fechaIn>210101</fechaIn>
+        <fechaFin>210601</fechaFin>
         <tel>88888888</tel>
         <nombre>Maria maria maria</nombre>
         <mail>maria@maria.maria</mail>
@@ -198,8 +178,8 @@
         <banos> 3 </banos>
         <fianza> 1000 </fianza>
         <descripcion>No quejarse del precio que con lo cara que va la memória lo he puesto donde más duele</descripcion>
-        <fechaIn>20000901</fechaIn>
-        <fechaFin>20100601</fechaFin>
+        <fechaIn>200901</fechaIn>
+        <fechaFin>210601</fechaFin>
         <tel>666 666 666</tel>
         <nombre>Joseba Makazaga</nombre>
         <mail>ios@faks.com</mail>

@@ -9,18 +9,21 @@
   <div class="cabecera">
         <a title="UPV" href="https://www.ehu.eus/es/"><img class="image" src="log.png" alt="logo"></a>
         <span class="text1">OSTATU</span>
-    </div>
-    <div style = "margin-top:%">
+  </div>
+    <br><br><br><br><br><br><br><br>
+    
     <?php
     function display($piso){
-    echo ('<span style = "margin-top:10%">Hola'.$piso->direccion.' el piso este es el º y va mas o menos bien </span>');
-    echo ('<h1>Hola'.$piso->precio.'</h1>');
-    echo ('<h1>Hola'.$piso->habitaciones.'</h1>');
-    echo ('<h1>Hola'.$piso->banos.'</h1><br><br>');
+      echo('<div class = "piso">');
+      echo ('<span>Hola'.$piso->direccion.' el piso este es el º y va mas o menos bien </span>');
+      echo ('<span>Hola'.$piso->precio.' </span>');
+      echo ('<span>Hola'.$piso->habitaciones.' </span>');
+      echo ('<span>Hola'.$piso->banos.' </span><br><br>');
+      echo('</div>');
   }
+  
   ?>
   
-</div>
 <?php
   $pisos = simplexml_load_file('lista_pisos.xml');
   
@@ -52,20 +55,16 @@
     foreach($pisos->piso as $piso){
       if($provincia==$piso->direccion['prov'] &&
         $piso->precio <$precMax && 
-        ($piso->habitaciones ==$habEsc ||$habEsc==0) &&
-        ($piso->banos ==$bath ||$bath==0) &&  
-        abs($fechaInEsc-$piso->fechaIn)<30 || isset($piso->fechaIn)  && 
-        abs($fechaFinEsc-$piso->fechaFin)<30 || isset($piso->fechaFin))
+        ($piso->habitaciones ==$habEsc ||$habEsc==0 )&&
+        ($piso->banos ==$bath ||$bath==0 )&& 
+        (abs($fechaInEsc-$piso->fechaIn)<30 || isset($piso->fechaIn))&& 
+        (abs($fechaFinEsc-$piso->fechaFin)<30 || isset($piso->fechaFin)))
       {
           display($piso);
       }
     }
   }
 ?>
-
-
-
-
 <div class="mapas">
         <div class="contenedor">
             <iframe
