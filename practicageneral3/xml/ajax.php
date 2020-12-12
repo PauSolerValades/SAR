@@ -14,10 +14,11 @@
 		{
 			if($piso['id'] == $id)
 			{
-                foreach($piso->fotos as $foto)
+				$fotos=$piso->fotos;
+				foreach($fotos->foto as $foto)
 		        {
                 // Devolver el comentario encontrado y terminar
-                    if($foto['FotoId'] == $id)
+                    if($foto['id'] == $fotoId)
 			        {
 				        echo($foto);
                         break;

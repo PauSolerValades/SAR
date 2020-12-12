@@ -12,9 +12,9 @@
     <tel>776666666</tel>
     <nombre>Aitor tilla</nombre>
     <mail>satan@atana.xsa</mail>
-    <fotos ult_id = "2" tiene = "si">
-    <foto id = "1">Images/pisos/a.jpg</foto>
-    <foto id = "0">Images/pisos/b.jpg</foto>
+    <fotos ult_id = "1" tiene = "si">
+    <foto id = "0">Images/pisos/a.jpg</foto>
+    <foto id = "1">Images/pisos/b.jpg</foto>
     </fotos>
     <caracteristicas 
         lavavajillas="0" 
