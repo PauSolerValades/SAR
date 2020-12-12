@@ -9,8 +9,8 @@
         <banos> 1 </banos>
         <fianza> 900 </fianza>
         <descripcion>Mis commits son aaaaaaaaaaaaaaaaaaaaaaaaa sí de buenos</descripcion>
-        <fechaIn>200901</fechaIn>
-        <fechaFin>210601</fechaFin>
+        <fechaIn>20-09-01</fechaIn>
+        <fechaFin>21-06-01</fechaFin>
         <tel>7777777</tel>
         <nombre>Elba lazo</nombre>
         <mail>elba@lazo.com</mail>
@@ -33,10 +33,10 @@
         <banos> 3 </banos>
         <fianza> 1000 </fianza>
         <descripcion>quiero, montarme en tu velero, ponerte el sombrero</descripcion>
-        <fechaIn>210101</fechaIn>
-        <fechaFin>210601</fechaFin>
+        <fechaIn>2021-01-01</fechaIn>
+        <fechaFin>21-06-01</fechaFin>
         <tel>88888888</tel>
-        <nombre>Maria maria maria</nombre>
+        <nombre>Maria</nombre>
         <mail>maria@maria.maria</mail>
         <fotos ult_id = "0" tiene = "si">
             <foto id = "0">Images/pisos/d.jpg</foto>
@@ -57,8 +57,8 @@
         <banos> 0 </banos>
         <fianza> 300 </fianza>
         <descripcion>El baño es compartido con los vecinos de al lado.</descripcion>
-        <fechaIn>210101</fechaIn>
-        <fechaFin>210601</fechaFin>
+        <fechaIn>2021-01-01</fechaIn>
+        <fechaFin>2021-06-01</fechaFin>
         <tel>999999999</tel>
         <nombre>Ander Carrera</nombre>
         <mail>acr1200.csmm@gmail.com</mail>
@@ -81,10 +81,10 @@
         <banos> 3 </banos>
         <fianza> 3000 </fianza>
         <descripcion>Esta super mal ubicado, no tiene sentido</descripcion>
-        <fechaIn>200901</fechaIn>
-        <fechaFin>210601</fechaFin>
+        <fechaIn>2020-09-01</fechaIn>
+        <fechaFin>2021-06-01</fechaFin>
         <tel>111111111</tel>
-        <nombre>Jon Travolta Ortiz</nombre>
+        <nombre>Jon Travolta</nombre>
         <mail>pipo@pipo.com</mail>
         <fotos ult_id = "0" tiene = "si">
             <foto id = "0">Images/pisos/f.jpg</foto>
@@ -157,7 +157,7 @@
         <fechaIn>210101</fechaIn>
         <fechaFin>210601</fechaFin>
         <tel>88888888</tel>
-        <nombre>Maria maria maria</nombre>
+        <nombre>Maria</nombre>
         <mail>maria@maria.maria</mail>
         <fotos ult_id = "0" tiene = "si">
             <foto id = "0">Images/pisos/j.jpg</foto>

@@ -16,12 +16,60 @@
     echo('</div>');
     function display($piso){
       
-      echo('<div class = "piso">');
-      echo('<image src ="'.$piso->fotos->foto.'">');
-      echo ('<span>Hola'.$piso->direccion.' el piso este es el º y va mas o menos bien </span>');
-      echo ('<span>Hola'.$piso->precio.' </span>');
-      echo ('<span>Hola'.$piso->habitaciones.' </span>');
-      echo ('<span>Hola'.$piso->banos.' </span><br><br>');
+      echo('<div class = "piso" >');
+      echo('<image src ="'.$piso->fotos->foto.'" class = "imagenes">');
+      echo('<div style = "margin-top:2%;">');
+      echo ('<span  class = "datoss">Calle : </span>');
+      echo('<span class = "bd">'.$piso->direccion.'</span>');
+      echo ('<span class = "datoss" style = "display:inline;">Precio: </span>');
+      echo('<span class = "bd">'.$piso->precio.' €</span>');
+      echo ('<span class = "datoss" style = "display:inline;">Habitaciones: </span>');
+      echo('<span class = "bd">'.$piso->habitaciones.' </span>');
+      echo ('<span class = "datoss" style = "display:inline;">Banos: </span>');
+      echo('<span class = "bd">'.$piso->banos.' </span><br><br>');
+      echo('<span class = "datoss" style = "display:inline;">Fianza: </span>');
+      echo('<span class = "bd">'.$piso->fianza.' €</span>');
+      echo('<span class = "datoss" style = "display:inline;">Inicio: </span>');
+      echo('<span class = "bd">'.$piso->fechaIn.'</span>');
+      echo('<span class = "datoss" style = "display:inline;">Final: </span>');
+      echo('<span class = "bd">'.$piso->fechaFin.'</span>');
+      echo('<span class = "datoss" style = "display:inline;">Nombre: </span>');
+      echo('<span class = "bd">'.$piso->nombre.'</span><br><br>');
+      echo('<span class = "datoss" style = "display:inline;">Telefono: </span>');
+      echo('<span class = "bd">'.$piso->tel.'</span>');
+      echo('<span class = "datoss" style = "display:inline;">Email: </span>');
+      echo('<span class = "bd">'.$piso->mail.'</span><br><br>');
+      echo('<span class  ="datoss">Servicios: </span>');
+      echo('<img class = "iconos" src = "w.png" title = "WI-FI" alt = "WI-FI" style = "margin-right:-15px;">');
+      if($piso->caracteristicas["wifi"] == 1){
+        echo('<img class = "iconos" src = "s.png" title = "Si" alt = "Si" style = "padding-right:60px;">');
+      }else{
+        echo('<img class = "iconos" src = "n.png" title = "No" alt = "No" style = "padding-right:60px;">');
+      }
+      echo('<img class = "iconos" src = "lb.png" title = "Lavadora" alt = "Lavadora" style = "margin-right:-20px;">');
+      if($piso->caracteristicas["lavadora"]== 1){
+        echo('<img class = "iconos" src = "s.png" title = "Si" alt = "Si"  style = "padding-right:60px;">');
+      }else{
+        echo('<img class = "iconos" src = "n.png" title = "No" alt = "No" style = "padding-right:60px;">');
+      }
+      echo('<img class = "iconos" src = "lv.png" title = "Lavavajillas" alt = "Lavavajillas">');
+      if($piso->caracteristicas["lavavajillas"]== 1){
+        echo('<img class = "iconos" src = "s.png" title = "Si" alt = "Si" style = "padding-right:60px;">');
+      }else{
+        echo('<img class = "iconos" src = "n.png" title = "No" alt = "No" style = "padding-right:60px;">');
+      }
+      echo('<img class = "iconos" src = "t.png" title = "Terraza" alt = "Terraza" >');
+      if($piso->caracteristicas["terraza"]== 1){
+        echo('<img class = "iconos" src = "s.png" title = "Si" alt = "Si">');
+      }else{
+        echo('<img class = "iconos" src = "n.png" title = "No" alt = "No">');
+      }
+      echo('<br><span class = "datoss" style = "display:inline;">Descripcion:  </span><br>');
+      echo('<span class = "bd">'.$piso->descripcion.'</span><br><br>');
+
+
+
+      echo('</div>');
       echo('</div>');
       
   }
