@@ -19,9 +19,11 @@
     width: fit-content;
     text-align: center;
     border: 2px black solid;
-    margin-bottom: 20%;
+    margin-bottom: 200px;
 }
-
+.espaciado{
+    margin-bottom: 150px;
+}
 .image{
     vertical-align: middle;
     text-align: left;

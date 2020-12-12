@@ -10,17 +10,22 @@
         <a title="UPV" href="https://www.ehu.eus/es/"><img class="image" src="log.png" alt="logo"></a>
         <span class="text1">OSTATU</span>
   </div>
-    <br><br><br><br><br><br><br><br>
     
     <?php
+    echo('<div class = "espaciado">a');
+    echo('</div>');
     function display($piso){
+      
       echo('<div class = "piso">');
+      echo('<image src ="'.$piso->fotos->foto.'">');
       echo ('<span>Hola'.$piso->direccion.' el piso este es el º y va mas o menos bien </span>');
       echo ('<span>Hola'.$piso->precio.' </span>');
       echo ('<span>Hola'.$piso->habitaciones.' </span>');
       echo ('<span>Hola'.$piso->banos.' </span><br><br>');
       echo('</div>');
+      
   }
+  
   
   ?>
   
@@ -65,6 +70,7 @@
     }
   }
 ?>
+<div class = "espaciado">a</div>
 <div class="mapas">
         <div class="contenedor">
             <iframe
