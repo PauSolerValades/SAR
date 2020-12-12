@@ -52,8 +52,8 @@
     foreach($pisos->piso as $piso){
       if($provincia==$piso->direccion['prov'] &&
         $piso->precio <$precMax && 
-        $piso->habitaciones ==$habEsc ||$habEsc==0 &&
-        $piso->banos ==$bath ||$bath==0 &&  
+        ($piso->habitaciones ==$habEsc ||$habEsc==0) &&
+        ($piso->banos ==$bath ||$bath==0) &&  
         abs($fechaInEsc-$piso->fechaIn)<30 || isset($piso->fechaIn)  && 
         abs($fechaFinEsc-$piso->fechaFin)<30 || isset($piso->fechaFin))
       {
