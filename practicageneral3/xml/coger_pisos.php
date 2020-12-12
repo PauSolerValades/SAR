@@ -25,7 +25,7 @@
       echo('<span class = "bd">'.$piso->precio.' €</span>');
       echo ('<span class = "datoss" style = "display:inline;">Habitaciones: </span>');
       echo('<span class = "bd">'.$piso->habitaciones.' </span>');
-      echo ('<span class = "datoss" style = "display:inline;">Banos: </span>');
+      echo ('<span class = "datoss" style = "display:inline;">Baños: </span>');
       echo('<span class = "bd">'.$piso->banos.' </span><br><br>');
       echo('<span class = "datoss" style = "display:inline;">Fianza: </span>');
       echo('<span class = "bd">'.$piso->fianza.' €</span>');
@@ -107,7 +107,7 @@
     //la fecha le quitamos la barra para operar
     foreach($pisos->piso as $piso){
       if($provincia==$piso->direccion['prov'] &&
-        $piso->precio <$precMax && 
+        $piso->precio <=$precMax && 
         ($piso->habitaciones ==$habEsc ||$habEsc==0 )&&
         ($piso->banos ==$bath ||$bath==0 )&& 
         (abs($fechaInEsc-$piso->fechaIn)<30 || isset($piso->fechaIn))&& 
