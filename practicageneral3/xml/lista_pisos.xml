@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE visitas SYSTEM "lista_pisos.dtd">
-<pisos ult_id="9">
-    <piso id = "1">
-        <direccion prov="A">noseque kalea</direccion>
-        <precio>300</precio>
-        <habitaciones> 2 </habitaciones>
-        <banos> 1 </banos>
-        <fianza> 600 </fianza>
-        <descripcion> este piso claramente no existse, quiero decir, tu has visto el precio? </descripcion>
-        <fechaIn>200901</fechaIn>
-        <fechaFin>210601</fechaFin>
-        <tel>6666666</tel>
-        <nombre>Aitor tilla</nombre>
-        <mail>satan@atana.xsa</mail>
-        <fotos ult_id = "2" tiene = "si">
-            <foto id = "1">Images/pisos/a.jpg</foto>
-            <foto id = "0">Images/pisos/b.jpg</foto>
-        </fotos>
-        <caracteristicas 
-            lavavajillas="0"
-            wifi = "1"
-            terraza = "1"
-            lavadora = "1"        
-            >
-        </caracteristicas>
-    </piso>
+<pisos ult_id="9"><piso id = "1"><direccion prov="A">noseque kalea</direccion><precio>300</precio><habitaciones> 2</habitaciones><banos> 1 </banos><fianza> 600 </fianza><descripcion> este piso claramente no existse, quiero decir, tu has visto el precio? </descripcion><fechaIn>20000901</fechaIn><fechaFin>20010601</fechaFin><tel>6666666</tel><nombre>Aitor tilla</nombre><mail>satan@atana.xsa</mail><fotos ult_id = "2" tiene = "si"><foto id = "1">Images/pisos/a.jpg</foto><foto id = "0">Images/pisos/b.jpg</foto></fotos><caracteristicas lavavajillas="0" wifi = "1" terraza = "1" lavadora = "1"></caracteristicas></piso>
 
     <piso id = "2">
         <direccion prov="A">Jaumet del cul tet kalea</direccion>

@@ -15,6 +15,7 @@ function validateForm() {
   }else if(document.getElementById('gipuzkoa').checked){
       return true;
   }else{
-      alert("Bobo");
-      return false;}
+      alert("Seleccione una provincia");
+      return false;
+    }
 }

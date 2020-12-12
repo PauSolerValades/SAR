@@ -30,12 +30,12 @@
             <div class="boxed">
                 <span class="text5" style="margin-left: 4%;">Precio:</span>&nbsp;
                 <input name="precio" id="precio" type="range" class="slider" oninput="sliderChange(this.value)"
-                    max="1200" value="0">
-                <text id="valor" class="valor">0€</text>
+                    max="2000" value="2000">
+                <text id="valor" class="valor">2000€</text>
                 <span class="text5" style="margin-left: 4%;">Fecha inicio:</span>
-                <input type="date" id="inicio" name="inicio" min="2020-01-01" max="31-12-2020" style="width: 130px;" value="1975-01-01" >
+                <input type="date" id="inicio" name="inicio" min="2020-01-01" max="31-12-2020" style="width: 130px;" value="2020-01-01" >
                 <span class="text5" style="margin-left: 4%;">Fecha final:</span>
-                <input type="date" id="final" name="final" min="01-01-2020" max="31-12-2021" style="width: 130px;" value = "1975-01-01" ><br><br>
+                <input type="date" id="final" name="final" min="01-01-2021" max="31-12-2021" style="width: 130px;" value = "2021-12-31" ><br><br>
                 <span class="text5" style="margin-left: 20%;">Habitaciones:</span>
                 <select style="margin-right: 1%;" class="text5" id="hab" name="hab">
                     <option value="0">-</option>
@@ -46,14 +46,19 @@
                 </select>
                 <span class="text5" style="margin-left: 4%;" style="margin-right: 0.5%;">Baños:</span>
                 <select style="margin-right: 4%;" class="text5" id="bath" name="bath">
-                    <option value="0">0</option>
+                    <option value="0">-</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                 </select>
                 <span class="text5" style="margin-right: 1%;">Términos:</span>
                 <input type="text" placeholder="¿Que quiéres buscar? " style="width: 150px;" style="height: 18px;">
-                <input type="submit" class="boton" value="BUSCAR" onclick="return validateForm()">
+                <div style="text-align: center;">
+                    <input type="submit" class="boton" value="BUSCAR" onclick="return validateForm()">
+                </div>
+                
+            </div>
+
         </form>
     </div>
     </div>
