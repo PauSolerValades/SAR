@@ -100,24 +100,23 @@
   $final = trim($_GET['final']);
   $hab = trim($_GET['hab']);
   $bath = trim($_GET['bath']);
- 
+
   
   filtrado($pisos,$provincia, $precio, $hab, $bath, $inicio, $final);
 
 
-  
-  function filtrado($pisos,$provincia, $precMax, $habEsc, $bath, $fechaInEsc, $fechaFinEsc){
+
+  function filtrado($pisos,$provincia, $precMax, $habEsc, $batho, $fechaInEsc, $fechaFinEsc){
     //si quero hacer busqueda general habesc=0 preciomax>10000 fechas=0
     //la fecha le quitamos la barra para operar
     foreach($pisos->piso as $piso){
-      if($provincia==$piso->direccion['prov'] &&
-        $piso->precio <=$precMax && 
-        ($piso->habitaciones ==$habEsc ||$habEsc==0 )&&
-        ($piso->banos ==$bath ||$bath==0 )&& 
-        (abs($fechaInEsc-$piso->fechaIn)<30 || isset($piso->fechaIn))&& 
-        (abs($fechaFinEsc-$piso->fechaFin)<30 || isset($piso->fechaFin)))
-      {
-          display($piso);
+        $e=($piso->banos>=$batho  or $batho==0 );
+        $h=($piso->habitaciones == $habEsc or $habEsc==0);
+      if(($provincia==$piso->direccion['prov'] )&&
+        $piso->precio <=$precMax ){
+        if($e&&$h){
+            display($piso);
+       }
       }
     }
   }
