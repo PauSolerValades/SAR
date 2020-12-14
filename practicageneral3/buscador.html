@@ -35,7 +35,7 @@
                 <span class="text5" style="margin-left: 4%;">Precio:</span>&nbsp;
                 <input name="precio" id="precio" type="range" class="slider" oninput="sliderChange(this.value)"
                     max="2000" value="2000">
-                <text id="valor" class="valor">2000€</text>
+                <span id="valor" class="valor">2000€</span>
                 <span class="text5" style="margin-left: 4%;">Fecha inicio:</span>
                 <input type="date" id="inicio" name="inicio" min="2020-01-01" max="31-12-2020" style="width: 130px;" value="2020-01-01" >
                 <span class="text5" style="margin-left: 4%;">Fecha final:</span>
@@ -48,7 +48,7 @@
                     <option value="3">3</option>
                     <option value="4">4 ó +</option>
                 </select>
-                <span class="text5" style="margin-left: 4%;" style="margin-right: 0.5%;">Baños:</span>
+                <span class="text5" style="margin-left: 4%;margin-right: 0.5%;">Baños:</span>
                 <select style="margin-right: 4%;" class="text5" id="bath" name="bath">
                     <option value="0">-</option>
                     <option value="1">1</option>
@@ -56,7 +56,7 @@
                     <option value="3">3</option>
                 </select>
                 <span class="text5" style="margin-right: 1%;">Términos:</span>
-                <input type="text" placeholder="¿Que quiéres buscar? " style="width: 150px;" style="height: 18px;">
+                <input type="text" placeholder="¿Que quiéres buscar? " style="width: 150px;height: 18px;">
                 <div style="text-align: center;">
                     <input type="submit" class="boton" value="BUSCAR" onclick="return validateForm()">
                 </div>

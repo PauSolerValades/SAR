@@ -34,7 +34,7 @@
         <descripcion>Mis commits son aaaaaaaaaaaaaaaaaaaaaaaaa sí de buenos</descripcion>
         <fechaIn>2020-09-01</fechaIn>
         <fechaFin>2021-06-01</fechaFin>
-        <tel>7777777</tel>
+        <tel>777777788</tel>
         <nombre>Elba lazo</nombre>
         <mail>elba@lazo.com</mail>
         <fotos ult_id = "1" tiene = "si">
@@ -59,7 +59,7 @@
         <descripcion>quiero, montarme en tu velero, ponerte el sombrero</descripcion>
         <fechaIn>2020-01-01</fechaIn>
         <fechaFin>2021-06-01</fechaFin>
-        <tel>68888888</tel>
+        <tel>688888887</tel>
         <nombre>Maria</nombre>
         <mail>maria@maria.maria</mail>
         <fotos ult_id = "0" tiene = "si">
@@ -131,11 +131,11 @@
         <banos>1</banos>
         <fianza> 666 </fianza>
         <descripcion>gonna take my a lot to drag my away from you. </descripcion>
-        <fechaIn>210101</fechaIn>
-        <fechaFin>210601</fechaFin>
+        <fechaIn>2021-01-01</fechaIn>
+        <fechaFin>2021-06-01</fechaFin>
         <tel>62222222</tel>
         <nombre>Jorge Salazar</nombre>
-        <mail>jorge.autista@gmail.com</mail>
+        <mail>jorge@gmail.com</mail>
         <fotos ult_id = "0" tiene = "si">
             <foto id = "0">Images/pisos/g.jpg</foto>
         </fotos>
@@ -155,8 +155,8 @@
         <banos>3</banos>
         <fianza>4000</fianza>
         <descripcion>No tinc un puto duro hostia</descripcion>
-        <fechaIn>200901</fechaIn>
-        <fechaFin>210601</fechaFin>
+        <fechaIn>2020-09-01</fechaIn>
+        <fechaFin>2021-06-01</fechaFin>
         <tel>655555555</tel>
         <nombre>Pau ce truncada</nombre>
         <mail>ooooooo.aaaa@gmail.com</mail>
@@ -179,9 +179,9 @@
         <habitaciones>2</habitaciones>
         <banos>1</banos>
         <fianza> 800 </fianza>
-        <descripcion>Tienes una vela jorge. Para qué quieres una vela? Para qué quieres el vaso</descripcion>
-        <fechaIn>210101</fechaIn>
-        <fechaFin>210601</fechaFin>
+        <descripcion>Buenas vistas</descripcion>
+        <fechaIn>2021-01-01</fechaIn>
+        <fechaFin>2021-06-01</fechaFin>
         <tel>78888888</tel>
         <nombre>Maria</nombre>
         <mail>maria@maria.maria</mail>
@@ -204,8 +204,8 @@
         <banos>3</banos>
         <fianza> 1000 </fianza>
         <descripcion>No quejarse del precio que con lo cara que va la memória lo he puesto donde más duele</descripcion>
-        <fechaIn>200901</fechaIn>
-        <fechaFin>210601</fechaFin>
+        <fechaIn>2020-09-01</fechaIn>
+        <fechaFin>2020-06-01</fechaFin>
         <tel>666666666</tel>
         <nombre>Joseba Makazaga</nombre>
         <mail>ios@faks.com</mail>
