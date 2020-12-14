@@ -3,18 +3,19 @@
 <pisos ult_id="9"><piso id = "1">
     <direccion prov="A">noseque kalea</direccion>
     <precio>300</precio>
-    <habitaciones> 2</habitaciones>
-    <banos> 1 </banos>
+    <habitaciones>2</habitaciones>
+    <banos>1</banos>
     <fianza> 600 </fianza>
     <descripcion> este piso claramente no existse, quiero decir, tu has visto el precio? </descripcion>
     <fechaIn>2020-09-01</fechaIn>
-    <fechaFin>2020-06-01</fechaFin>
+    <fechaFin>2021-06-01</fechaFin>
     <tel>776666666</tel>
     <nombre>Aitor tilla</nombre>
     <mail>satan@atana.xsa</mail>
-    <fotos ult_id = "1" tiene = "si">
+    <fotos ult_id = "2" tiene = "si">
     <foto id = "0">Images/pisos/a.jpg</foto>
     <foto id = "1">Images/pisos/b.jpg</foto>
+    <foto id = "2">Images/pisos/n.jpg</foto>
     </fotos>
     <caracteristicas 
         lavavajillas="0" 
@@ -27,8 +28,8 @@
     <piso id = "2">
         <direccion prov="A">Jaumet del cul tet kalea</direccion>
         <precio>350</precio>
-        <habitaciones> 2 </habitaciones>
-        <banos> 1 </banos>
+        <habitaciones>2</habitaciones>
+        <banos>1</banos>
         <fianza> 900 </fianza>
         <descripcion>Mis commits son aaaaaaaaaaaaaaaaaaaaaaaaa sí de buenos</descripcion>
         <fechaIn>2020-09-01</fechaIn>
@@ -36,8 +37,9 @@
         <tel>7777777</tel>
         <nombre>Elba lazo</nombre>
         <mail>elba@lazo.com</mail>
-        <fotos ult_id = "0" tiene = "si">
+        <fotos ult_id = "1" tiene = "si">
             <foto id = "0">Images/pisos/c.jpg</foto>
+            <foto id = "1">Images/pisos/o.jpeg</foto>
         </fotos>
         <caracteristicas 
             lavavajillas="0"
@@ -51,11 +53,11 @@
     <piso id = "3">
         <direccion prov="A">Gran via de les corts catalanes</direccion>
         <precio>460</precio>
-        <habitaciones> 4 </habitaciones>
-        <banos> 3 </banos>
+        <habitaciones>4</habitaciones>
+        <banos>3</banos>
         <fianza> 1000 </fianza>
         <descripcion>quiero, montarme en tu velero, ponerte el sombrero</descripcion>
-        <fechaIn>2021-01-01</fechaIn>
+        <fechaIn>2020-01-01</fechaIn>
         <fechaFin>2021-06-01</fechaFin>
         <tel>68888888</tel>
         <nombre>Maria</nombre>
@@ -75,8 +77,8 @@
     <piso id = "4">
         <direccion prov="G">Euskereaerearesakearae</direccion>
         <precio>290</precio>
-        <habitaciones> 2 </habitaciones>
-        <banos> 0 </banos>
+        <habitaciones>2</habitaciones>
+        <banos>0</banos>
         <fianza> 300 </fianza>
         <descripcion>El baño es compartido con los vecinos de al lado.</descripcion>
         <fechaIn>2021-01-01</fechaIn>
@@ -84,8 +86,9 @@
         <tel>699999999</tel>
         <nombre>Ander Carrera</nombre>
         <mail>acr1200.csmm@gmail.com</mail>
-        <fotos ult_id = "0" tiene = "si">
+        <fotos ult_id = "1" tiene = "si">
             <foto id = "0">Images/pisos/e.jpg</foto>
+            <foto id = "1">Images/pisos/p.jpeg</foto>
         </fotos>
         <caracteristicas 
             lavavajillas="0"
@@ -99,8 +102,8 @@
     <piso id = "5">
         <direccion prov="G">zaldurndegei gei</direccion>
         <precio>1500</precio>
-        <habitaciones> 5 </habitaciones>
-        <banos> 3 </banos>
+        <habitaciones>5</habitaciones>
+        <banos>3</banos>
         <fianza> 3000 </fianza>
         <descripcion>Esta super mal ubicado, no tiene sentido</descripcion>
         <fechaIn>2020-09-01</fechaIn>
@@ -108,8 +111,9 @@
         <tel>611111111</tel>
         <nombre>Jon Travolta</nombre>
         <mail>pipo@pipo.com</mail>
-        <fotos ult_id = "0" tiene = "si">
+        <fotos ult_id = "1" tiene = "si">
             <foto id = "0">Images/pisos/f.jpg</foto>
+            <foto id = "1">Images/pisos/q.jpeg</foto>
         </fotos>
         <caracteristicas 
             lavavajillas="0"
@@ -123,8 +127,8 @@
     <piso id = "6">
         <direccion prov="G">ubunto street 17</direccion>
         <precio>370</precio>
-        <habitaciones> 4 </habitaciones>
-        <banos> 1 </banos>
+        <habitaciones>4</habitaciones>
+        <banos>1</banos>
         <fianza> 666 </fianza>
         <descripcion>gonna take my a lot to drag my away from you. </descripcion>
         <fechaIn>210101</fechaIn>
@@ -146,17 +150,17 @@
 
     <piso id = "7">
         <direccion prov="B">Avinguda garraf num 11</direccion>
-        <precio>2500</precio>
-        <habitaciones> 5 </habitaciones>
-        <banos> 3 </banos>
-        <fianza> 4000 </fianza>
+        <precio>2000</precio>
+        <habitaciones>5</habitaciones>
+        <banos>3</banos>
+        <fianza>4000</fianza>
         <descripcion>No tinc un puto duro hostia</descripcion>
         <fechaIn>200901</fechaIn>
         <fechaFin>210601</fechaFin>
         <tel>655555555</tel>
         <nombre>Pau ce truncada</nombre>
         <mail>ooooooo.aaaa@gmail.com</mail>
-        <fotos ult_id = "0" tiene = "si">
+        <fotos ult_id = "1" tiene = "si">
             <foto id = "0">Images/pisos/h.jpg</foto>
             <foto id = "1">Images/pisos/i.jpg</foto>
         </fotos>
@@ -172,8 +176,8 @@
     <piso id = "8">
         <direccion prov="B">Ninininininininininininin kalea</direccion>
         <precio>340</precio>
-        <habitaciones> 2 </habitaciones>
-        <banos> 1 </banos>
+        <habitaciones>2</habitaciones>
+        <banos>1</banos>
         <fianza> 800 </fianza>
         <descripcion>Tienes una vela jorge. Para qué quieres una vela? Para qué quieres el vaso</descripcion>
         <fechaIn>210101</fechaIn>
@@ -196,8 +200,8 @@
     <piso id = "9">
         <direccion prov="B">OpenGl kalea</direccion>
         <precio>500</precio>
-        <habitaciones> 4 </habitaciones>
-        <banos> 3 </banos>
+        <habitaciones>4</habitaciones>
+        <banos>3</banos>
         <fianza> 1000 </fianza>
         <descripcion>No quejarse del precio que con lo cara que va la memória lo he puesto donde más duele</descripcion>
         <fechaIn>200901</fechaIn>
