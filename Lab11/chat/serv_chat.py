@@ -2,7 +2,7 @@
 
 from twisted.protocols.basic import LineReceiver
 from twisted.internet.protocol import Factory
-from twisted.internet import reactor
+from twisted.internet import reactor, ssl
 from OpenSSL import SSL
 
 MAX_USERS = 100
@@ -10,6 +10,10 @@ MAX_MSG_LENGTH = 255
 MAX_USER_LENGTH = 16
 MAX_INACTIVITY = 10.0
 
+class ServerTLSContext(ssl.DefaultOpenSSLContextFactory):
+    def __init__(self, *args, **kw):
+        kw['sslmethod'] = SSL.TLSv1_METHOD
+        ssl.DefaultOpenSSLContextFactory.__init__(self, *args, **kw)
 
 class ChatProtocol(LineReceiver):
     def __init__(self, factory):
@@ -74,6 +78,9 @@ class ChatProtocol(LineReceiver):
             self.broadcastMessage("WRT"+self.name)
         
         elif line.startswith("TLS"):
+            ctx = ServerTLSContext(privateKeyFileName='privada.key', certificateFileName='certificado.crt')
+            self.transport.startTLS(ctx, self.factory)
+            self.sendLine(b"+")
 
         else:
             self.sendLine(b"-0")
