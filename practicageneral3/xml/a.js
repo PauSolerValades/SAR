@@ -1,8 +1,3 @@
-function siguienteImagen(){
-	
-    var img = document.getElementById("imag");
-    img.src='imagenes/b.jpg';
-}
 function flechas(right,left,id,ult_id){
 	if(id==ult_id){
 		document.getElementById(right).style.visibility= 'hidden';
