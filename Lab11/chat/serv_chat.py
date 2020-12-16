@@ -8,7 +8,14 @@ from OpenSSL import SSL
 MAX_USERS = 100
 MAX_MSG_LENGTH = 255
 MAX_USER_LENGTH = 16
-MAX_INACTIVITY = 10.0
+MAX_INACTIVITY = 3.0
+
+def init_array():
+    f = open("banned.txt", "r")
+    arr = f.read().split("\n")
+    f.close()
+
+    return arr
 
 class ServerTLSContext(ssl.DefaultOpenSSLContextFactory):
     def __init__(self, *args, **kw):
@@ -51,6 +58,7 @@ class ChatProtocol(LineReceiver):
                 self.factory.users[self.name] = self
                 self.broadcastMessage("INN" + self.name)
                 self.sendLine(b"+")
+                
         elif line.startswith("MSG") and self.name:
             message = line[3:]
 
@@ -60,13 +68,10 @@ class ChatProtocol(LineReceiver):
                 self.sendLine(b"-5")
             else:
 
-                f = open("banned.txt", "r")
-                arr = f.read().split("\n")
-                f.close()
-
-                for i in arr[:-1]:
+                for i in self.factory.arr[:-1]:
                     if i in message:
-                        message = message.replace(i, "#####")
+                        a = "#"*len(i)
+                        message = message.replace(i, a)
                 
                 message = "MSG{} {}".format(self.name, message)
                 self.broadcastMessage(message)
@@ -93,6 +98,7 @@ class ChatProtocol(LineReceiver):
 class ChatFactory(Factory):
     def __init__(self):
         self.users = {}
+        self.arr = init_array()
 
     def buildProtocol(self, addr):
         return ChatProtocol(self)
